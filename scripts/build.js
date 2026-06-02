@@ -8,8 +8,8 @@ const FORMSPREE_ENDPOINT = process.env.FORMSPREE_ENDPOINT || 'https://formspree.
 
 const nav = [
   ['Product', '/product/'],
-  ['How it works', '/how-it-works/'],
-  ['Use cases', '/use-cases/'],
+  ['How It Works', '/how-it-works/'],
+  ['Use Cases', '/use-cases/'],
   ['Resources', '/resources/'],
   ['Pricing', '/pricing/'],
   ['FAQ', '/faq/']
@@ -19,8 +19,8 @@ const footerLinks = [
   ['Home', '/'],
   ['Product', '/product/'],
   ['Features', '/features/'],
-  ['How it works', '/how-it-works/'],
-  ['Use cases', '/use-cases/'],
+  ['How It Works', '/how-it-works/'],
+  ['Use Cases', '/use-cases/'],
   ['Resources', '/resources/'],
   ['Task paralysis guide', '/task-paralysis-guide/'],
   ['ADHD task initiation', '/adhd-task-initiation/'],
@@ -43,63 +43,64 @@ const productScreens = [
 ];
 
 const useCases = [
-  ['Work tasks', 'You have a report, proposal, or email you keep avoiding.', 'Write my client proposal', 'Open the document and write only the title.'],
-  ['Study tasks', 'The chapter feels too big, so the first action needs to feel tiny.', 'Study chapter 4', 'Open the chapter and read only the first heading.'],
-  ['Life admin', 'Small tasks pile up until the list feels heavy.', 'Reply to three messages', 'Open one message and write the first sentence.'],
-  ['Cleaning or home tasks', 'The room feels like too much to fix at once.', 'Clean my room', 'Pick up five visible items and put them in one place.'],
-  ['Creative tasks', 'The blank page feels harder than the work.', 'Start my design idea', 'Write three rough words about the idea.'],
-  ['Overwhelming tasks', 'The task is real, but your brain cannot find the entrance.', 'Sort everything I need to do', 'Write the task name at the top of a blank note.']
+  ['Work tasks', 'You have a work task open in your mind, but the first step feels unclear.', 'Prepare the weekly report', 'Open the report file and write only the section headings.'],
+  ['Study tasks', 'You need to study, but the material feels too large to enter.', 'Revise cardiovascular pharmacology', 'Open the notes and highlight only one heading you recognize.'],
+  ['Life admin', 'Small personal tasks have piled up and now feel heavier than they are.', 'Reply to an important email', 'Open the email and write only the greeting.'],
+  ['Cleaning tasks', 'The room feels overwhelming because everything looks like one big task.', 'Clean my room', 'Put only the clothes from the chair into one basket.'],
+  ['Creative tasks', 'You want to create something, but the blank page makes starting feel hard.', 'Write a new article', 'Write three rough bullet points without editing them.'],
+  ['Overwhelming tasks', 'The task has too many parts, so your brain avoids the whole thing.', 'Plan next week', 'Write down only three things that must happen first.']
 ];
 
 const faqs = {
   'About Gomentum': [
-    ['What is Gomentum?', 'Gomentum helps you start a task by turning it into one tiny first move and a short start session. See the Product page for the flow.'],
-    ['Is it a task manager?', 'No. Task managers help you organize work. Gomentum helps before that, when starting is the hard part.']
+    ['What is Gomentum?', 'Gomentum is a calm task initiation tool that helps you turn an overwhelming task into one tiny first move. <a href="/product/">See the product flow</a>.'],
+    ['How is this different from a task manager?', 'Task managers help you organize tasks. Gomentum focuses on the moment before action, when starting feels hard.']
   ],
   'Using the product': [
     ['What should I type first?', 'Type one task in plain words, like “reply to emails” or “start my report.”'],
-    ['What happens after the first move?', 'You can start a short timer, continue, pause, or try another task.'],
-    ['Where can I see examples?', 'The Use Cases page shows work, study, life admin, home, creative, and overwhelming-task examples.']
+    ['How does Gomentum suggest the first move?', 'Gomentum is designed to look at the task, use case, and mood check-in, then suggest a small action that feels easier to start. In beta, this logic is still being improved.'],
+    ['Do I need an account to try it?', 'You can try the public first-step demo on the website without an account. Full beta access may require signup if saved progress is needed.']
   ],
   'Beta and pricing': [
-    ['Is Gomentum free?', 'Gomentum is free during beta. No card is required. See the Pricing page for the current beta position.'],
-    ['Will pricing change later?', 'Yes. If paid plans are introduced, users should be told clearly before anything changes.']
+    ['What happens after the beta?', 'Pricing may change as the product improves. Users should be told clearly before any paid plan affects access. <a href="/pricing/">Read pricing details</a>.'],
+    ['Will there be a mobile app?', 'The website is designed mobile-first. A dedicated mobile app can come later, but the current public build focuses on a responsive web experience.']
   ],
   'Privacy and safety': [
-    ['Does the public demo save my task?', 'No. The public demo runs locally in the browser. Read the Privacy page for the plain-English policy.'],
-    ['Is Gomentum medical advice?', 'No. It is not therapy, diagnosis, or medical treatment. It is a task initiation support tool.'],
-    ['What if the site is hard to use?', 'Use the Contact page to report accessibility or usability issues. The Accessibility page explains current commitments.']
+    ['Is my data private and secure?', 'The public website demo does not save the task you type. Product task data should be handled with clear user control and no unnecessary sharing. <a href="/privacy/">Read the privacy page</a>.'],
+    ['Is Gomentum a medical or therapy tool?', 'No. Gomentum is not a medical, diagnostic, or therapy tool. It can support ADHD-style task initiation challenges, but it does not treat or diagnose any condition.'],
+    ['What if the site is hard to use?', 'If something is hard to read, navigate, or use, send a note through the <a href="/contact/">Contact page</a> or read the <a href="/accessibility/">Accessibility page</a>.']
   ],
   'ADHD and task paralysis': [
-    ['Can people with ADHD-style task paralysis use it?', 'Yes. The experience is designed to be calm, clear, and low-pressure. It does not claim to treat ADHD.'],
-    ['Why does the first move matter?', 'Because the hardest part is often entering the task, not understanding the whole plan. Read the Task Paralysis Guide for more context.']
+    ['Who is Gomentum for?', 'Gomentum is for people who struggle to begin tasks, feel overwhelmed by starting, or need a smaller way to enter the work. It is not a medical or diagnostic tool.'],
+    ['Why does the first move matter?', 'Because the hardest part is often entering the task, not understanding the whole plan. <a href="/task-paralysis-guide/">Read the Task Paralysis Guide</a>.'],
+    ['Anything else I should know?', 'The site uses honest beta language. Some features are available now, some are improving, and some may be planned for later versions.']
   ]
 };
 
 const resources = [
-  { title: 'Task paralysis guide', category: 'Task paralysis', time: '7 min read', problem: 'You know the task matters, but your brain cannot find the entrance.', action: 'Write the task name and choose one visible part of it.', href: '/task-paralysis-guide/' },
-  { title: 'ADHD-friendly task initiation', category: 'ADHD-friendly productivity', time: '6 min read', problem: 'Normal productivity advice can feel like another demand.', action: 'Start with a low-energy first move instead of a perfect routine.', href: '/adhd-task-initiation/' },
-  { title: 'When to use a 3-minute start', category: 'Focus', time: '4 min read', problem: 'A long focus block can feel too big to begin.', action: 'Set a 3-minute timer and stop when it ends if needed.', href: '/how-it-works/' },
-  { title: 'Why task managers can feel like more work', category: 'Procrastination', time: '5 min read', problem: 'Organizing the task can become a new task.', action: 'Skip the system and ask for the first physical action.', href: '/features/' },
-  { title: 'Tiny habits for stuck days', category: 'Tiny habits', time: '5 min read', problem: 'Big routines collapse when energy is low.', action: 'Pick one repeatable start cue, like opening the note first.', href: '/resources/' },
-  { title: 'Starting routines for study and work', category: 'Starting routines', time: '6 min read', problem: 'Work, study, and home tasks each need a different entrance.', action: 'Choose the example closest to your task and copy the first move.', href: '/use-cases/' }
+  { title: 'What Is Task Paralysis and Why Starting Feels Hard?', category: 'Task paralysis', time: 'Guide · 8 min read', problem: 'Beginning can feel impossible even when you know what needs to be done.', action: 'Write the task exactly as it feels, then make the first move smaller than expected.', href: '/task-paralysis-guide/' },
+  { title: 'ADHD Task Initiation: How to Start Without Pressure', category: 'ADHD-friendly productivity', time: 'Guide · 8 min read', problem: 'Normal productivity advice can feel like another demand when starting is the hard part.', action: 'Use your current energy level to choose a smaller starting point.', href: '/adhd-task-initiation/' },
+  { title: 'How to Start a Task When You Feel Overwhelmed', category: 'Procrastination', time: 'Guide · 6 min read', problem: 'A large task can feel impossible when the entry point is unclear.', action: 'Name one visible part of the task and start there for three minutes.', href: '/how-it-works/' },
+  { title: 'How to Break a Big Task Into Small Steps', category: 'Focus', time: 'Guide · 7 min read', problem: 'A vague task can stay stuck because it is not yet physical enough to begin.', action: 'Turn the task into one action you can see, touch, open, write, or move.', href: '/features/' },
+  { title: 'Brain Dump Productivity: How to Clear Your Head and Begin', category: 'Starting routines', time: 'Guide · 6 min read', problem: 'Scattered thoughts can make every task feel equally urgent.', action: 'Write everything down, then choose only one first move.', href: '/product/' },
+  { title: 'Tiny First Moves for Work, Study, and Life Admin', category: 'Tiny habits', time: 'Guide · 5 min read', problem: 'Different tasks need different entrances, especially on low-energy days.', action: 'Choose the example closest to your task and copy the first move.', href: '/use-cases/' }
 ];
 
 
 const lighthouseRows = [
-  ['Home', 'Pending', 'Pending', 'Pending', 'Pending', 'Mobile and desktop Lighthouse', 'To be captured'],
-  ['Contact', 'Pending', 'Pending', 'Pending', 'Pending', 'Form and accessibility test', 'To be captured'],
-  ['FAQ', 'Pending', 'Pending', 'Pending', 'Pending', 'Content and accordion test', 'To be captured'],
-  ['Task Paralysis Guide', 'Pending', 'Pending', 'Pending', 'Pending', 'SEO article test', 'To be captured'],
-  ['ADHD Task Initiation', 'Pending', 'Pending', 'Pending', 'Pending', 'SEO article test', 'To be captured']
+  ['Home', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Mobile and desktop Lighthouse', 'Pending real test result.'],
+  ['Contact', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Form and accessibility test', 'Pending real test result.'],
+  ['FAQ', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Content and accordion test', 'Pending real test result.'],
+  ['Task Paralysis Guide', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'SEO article test', 'Pending real test result.'],
+  ['ADHD Task Initiation', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'SEO article test', 'Pending real test result.']
 ];
 
 const waveRows = [
-  ['Home', 'Pending', 'Pending', 'Pending', 'Run WAVE and document fixes made', 'Awaiting test screenshot'],
-  ['Contact', 'Pending', 'Pending', 'Pending', 'Check labels, errors, and success state', 'Awaiting test screenshot'],
-  ['FAQ', 'Pending', 'Pending', 'Pending', 'Check accordion semantics and heading order', 'Awaiting test screenshot'],
-  ['Task Paralysis Guide', 'Pending', 'Pending', 'Pending', 'Check headings, links, and contrast', 'Awaiting test screenshot'],
-  ['Pricing', 'Pending', 'Pending', 'Pending', 'Check plan cards, CTAs, and contrast', 'Awaiting test screenshot']
+  ['Home', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Run WAVE and document fixes made', 'Pending real test result.'],
+  ['Contact', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Check labels, errors, and success state', 'Pending real test result.'],
+  ['FAQ', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Check accordion semantics and heading order', 'Pending real test result.'],
+  ['Task Paralysis Guide', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Check headings, links, and contrast', 'Pending real test result.'],
+  ['Pricing', 'Pending real test result.', 'Pending real test result.', 'Pending real test result.', 'Check plan cards, CTAs, and contrast', 'Pending real test result.']
 ];
 
 const evidenceAssets = [
@@ -158,43 +159,43 @@ const pages = [
   {
     slug: '/pricing/',
     title: 'Gomentum Pricing and Beta Access',
-    description: 'Gomentum is free during beta with no card required. See the simple beta access plan and future pricing direction.',
-    h1: 'Free during beta. No card needed.',
+    description: 'Gomentum is currently in beta. See the simple beta access path and future pricing direction without sales pressure.',
+    h1: 'Pricing',
     body: pricingPage()
   },
   {
     slug: '/faq/',
     title: 'Gomentum FAQ | Product, Privacy, Pricing, and ADHD Support',
-    description: 'Answers about Gomentum, beta access, privacy, task inputs, ADHD-related use, and how the first-move flow works.',
-    h1: 'Real questions. Short answers.',
+    description: 'Short answers about the product, beta access, privacy, and ADHD-style task initiation support.',
+    h1: 'FAQ',
     body: faqPage()
   },
   {
     slug: '/contact/',
     title: 'Contact Gomentum',
-    description: 'Contact Gomentum for beta feedback, support questions, accessibility issues, partnerships, or product questions.',
-    h1: 'Tell us what you need.',
+    description: 'Send Gomentum beta feedback, support questions, accessibility issues, partnership notes, or product questions.',
+    h1: 'Contact',
     body: contactPage()
   },
   {
     slug: '/privacy/',
     title: 'Gomentum Privacy Policy',
-    description: 'Plain-English privacy policy for Gomentum, including task inputs, form data, cookies, analytics, sharing, and deletion requests.',
-    h1: 'Privacy in plain English.',
+    description: 'Privacy at Gomentum, including task inputs, form data, cookies, analytics, sharing, and deletion requests.',
+    h1: 'Privacy',
     body: privacyPage()
   },
   {
     slug: '/terms/',
     title: 'Gomentum Terms of Use',
-    description: 'Simple beta terms for using Gomentum, including product status, acceptable use, privacy, and contact guidance.',
-    h1: 'Simple terms for beta use.',
+    description: 'Basic terms for using Gomentum, including product status, acceptable use, privacy, and contact guidance.',
+    h1: 'Terms',
     body: termsPage()
   },
   {
     slug: '/accessibility/',
     title: 'Gomentum Accessibility Statement',
-    description: 'Gomentum accessibility commitments for keyboard navigation, contrast, readable fonts, reduced motion, forms, and feedback.',
-    h1: 'Built for clarity, calm, and access.',
+    description: 'Accessibility at Gomentum, including keyboard navigation, contrast, readable fonts, reduced motion, forms, and feedback.',
+    h1: 'Accessibility',
     body: accessibilityPage()
   },
   {
@@ -207,15 +208,15 @@ const pages = [
   {
     slug: '/adhd-task-initiation/',
     title: 'ADHD Task Initiation Support | Gomentum',
-    description: 'A calm SEO guide for ADHD-style task initiation, task paralysis, first moves, short starts, and safe product support from Gomentum.',
-    h1: 'ADHD-friendly support for the moment before starting.',
+    description: 'ADHD task initiation support for starting small, with safe product language, first moves, short starts, and no medical claims.',
+    h1: 'ADHD task initiation',
     body: adhdPage()
   },
   {
     slug: '/task-paralysis-guide/',
     title: 'Task Paralysis Guide | Why Starting Feels Hard',
-    description: 'A supportive SEO guide to task paralysis, common signs, what does not help, simple first-move methods, and Gomentum task support.',
-    h1: 'Task paralysis is a starting problem.',
+    description: 'Task paralysis guide explaining why starting feels hard, common signs, what does not help, and simple first-move examples.',
+    h1: 'Task paralysis guide',
     body: taskGuidePage()
   }
 ];
@@ -229,7 +230,7 @@ function rel(slug) {
   return path.join(slug.replace(/^\//, ''), 'index.html');
 }
 
-function cta(label = 'Try one small step', href = '/#demo', kind = 'primary') {
+function cta(label = 'Start One Small Step', href = '/#demo', kind = 'primary') {
   return `<a class="btn ${kind === 'secondary' ? 'btn-secondary' : 'btn-primary'}" href="${href}">${label}</a>`;
 }
 
@@ -261,7 +262,7 @@ function pageShell(page) {
     ${page.body}
   </main>
   ${footer()}
-  <a class="sticky-cta" href="/#demo" aria-label="Try one small step">Try one small step</a>
+  <a class="sticky-cta" href="/#demo" aria-label="Start One Small Step">Start One Small Step</a>
   <script src="/assets/app.js" defer></script>
 </body>
 </html>`;
@@ -275,13 +276,13 @@ function header() {
         <span class="brand-mark" aria-hidden="true">G</span><span>Gomentum</span>
       </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
-      <nav class="desktop-nav" aria-label="Primary navigation">${navItems}<a class="nav-cta" href="/#demo">Try one small step</a></nav>
+      <nav class="desktop-nav" aria-label="Primary navigation">${navItems}<a class="nav-cta" href="/#demo">Start One Small Step</a></nav>
     </div>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
       ${nav.map(([label, href]) => `<a href="${href}">${label}</a>`).join('')}
       <a href="/contact/">Contact</a>
       <a href="/evidence/">Evidence & QA</a>
-      <a href="/#demo" class="nav-cta">Try one small step</a>
+      <a href="/#demo" class="nav-cta">Start One Small Step</a>
     </nav>
   </header>`;
 }
@@ -291,8 +292,8 @@ function footer() {
     <div class="container footer-grid">
       <div>
         <a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">G</span><span>Gomentum</span></a>
-        <p>One tiny first move for the task you have been avoiding.</p>
-        <p class="small">Gomentum is not therapy, diagnosis, or medical treatment.</p>
+        <p>Start tasks when starting feels impossible. One small step. Real momentum.</p>
+        <p class="small">Gomentum is a productivity support tool, not medical or therapy advice.</p>
       </div>
       <div class="footer-links" aria-label="Footer links">
         ${footerLinks.map(([label, href]) => `<a href="${href}">${label}</a>`).join('')}
@@ -301,7 +302,7 @@ function footer() {
   </footer>`;
 }
 
-function hero({eyebrow, h1, intro, primary = 'Try one small step', secondary = 'See how it works', secondaryHref = '/how-it-works/'}) {
+function hero({eyebrow, h1, intro, primary = 'Start One Small Step', secondary = 'See How It Works', secondaryHref = '/how-it-works/'}) {
   return `<section class="hero section-tight">
     <div class="container hero-grid">
       <div class="hero-copy">
@@ -317,17 +318,17 @@ function hero({eyebrow, h1, intro, primary = 'Try one small step', secondary = '
 
 function homePage() {
   return `${hero({
-    eyebrow: 'Task initiation, not another task manager',
-    h1: 'Start the task without fighting yourself.',
-    intro: 'Gomentum turns a messy task into one tiny first move, so you can begin without pressure.'
+    eyebrow: 'A calm task initiation tool for people who struggle to start.',
+    h1: 'Start tasks when starting feels impossible.',
+    intro: 'Some days, the task is not the hard part. Beginning is. Gomentum turns a messy task into one tiny first move, then gives you a short, low-pressure way to start.'
   })}
   ${demoSection()}
   <section class="section soft-section">
     <div class="container split calm-split">
       <div>
-        <p class="eyebrow">For stuck moments</p>
-        <h2>Starting is just harder some days.</h2>
-        <p>Gomentum gives you a small entrance instead of asking you to build a full productivity system.</p>
+        <p class="eyebrow">A smaller way to begin</p>
+        <h2>You are not lazy. Starting is just harder some days.</h2>
+        <p>When a task feels too big, your brain may not need another list. It may need a smaller entrance. Gomentum helps you begin with one clear action instead of asking you to organize everything first.</p>
       </div>
       ${editorialVisual('A calm person sitting beside a phone with a simple first-move card on screen.')}
     </div>
@@ -335,28 +336,28 @@ function homePage() {
   ${stepsSection()}
   <section class="section">
     <div class="container">
-      <div class="section-head narrow"><p class="eyebrow">Product preview</p><h2>Small screens, small steps.</h2><p>Gomentum keeps the experience focused: one input, one first move, one short start.</p></div>
+      <div class="section-head narrow"><p class="eyebrow">Product preview</p><h2>One task. One first move. One short start.</h2><p>This is not another place to store your tasks. To-do lists show you everything. Gomentum shows you the next doable thing.</p></div>
       <div class="mockup-row three">${phoneMockup(productScreens[0])}${phoneMockup(productScreens[1])}${phoneMockup(productScreens[3])}</div>
     </div>
   </section>
   <section class="section soft-section">
     <div class="container">
-      <div class="section-head narrow"><p class="eyebrow">Useful for</p><h2>Work, study, life admin, and home tasks.</h2><p>Use it when the task is clear, but the start still feels too heavy.</p></div>
+      <div class="section-head narrow"><p class="eyebrow">Useful for</p><h2>Work, study, life admin, and everyday tasks.</h2><p>Gomentum can support moments where you know what to do but cannot begin.</p></div>
       <div class="light-card-grid three">${useCases.slice(0,3).map(useCaseCard).join('')}</div>
     </div>
   </section>
   ${trustStrip()}
   ${trustProof()}
   ${faqPreview()}
-  ${finalCta('Ready to try one small step?', 'Type one task. Get one small first move. Stop there if that is enough.')}`;
+  ${finalCta('Start with one small step today.', 'You do not need to plan your whole day. Type one task, get one first move, and begin gently.')}`;
 }
 
 function demoSection() {
   return `<section class="section demo-section" id="demo" aria-labelledby="demo-heading">
     <div class="container demo-wrap">
-      <div class="section-head narrow"><p class="eyebrow">Try it now</p><h2 id="demo-heading">Write one task. Get one first move.</h2><p>Use a starter chip or type your own task. This public demo runs in your browser.</p></div>
+      <div class="section-head narrow"><p class="eyebrow">Try it now</p><h2 id="demo-heading">Try one first move before you sign up.</h2><p>Type one task you have been avoiding. Gomentum shows what the first doable action could look like.</p></div>
       <div class="demo-card" data-demo>
-        <div class="chip-row" aria-label="Starter task examples">
+        <p class="eyebrow">Start with an example</p><div class="chip-row" aria-label="Starter task examples">
           ${['Write my report', 'Reply to emails', 'Study chapter 4', 'Clean my room'].map(t => `<button class="chip" type="button" data-task="${esc(t)}">${esc(t)}</button>`).join('')}
         </div>
         <label for="task-input">One task you are avoiding</label>
@@ -364,24 +365,37 @@ function demoSection() {
           <input id="task-input" type="text" autocomplete="off" placeholder="e.g. write my report" aria-describedby="demo-help" />
           <button class="btn btn-primary" type="button" data-demo-submit>Show me the first move</button>
         </div>
-        <p id="demo-help" class="helper">Keep it messy. One task is enough.</p>
+        <p id="demo-help" class="helper">One avoided task is enough.</p>
         <div class="demo-result" role="status" aria-live="polite" data-demo-result>
           <p class="eyebrow">First move preview</p>
-          <p>Choose a starter task above, or type your own.</p>
+          <p>Your first move will appear here.</p><p class="helper">Your input stays private in this page demo.</p>
         </div>
       </div>
     </div>
   </section>`;
 }
 
-function stepsSection() {
+function stepsSection(detailed = false) {
+  if (detailed) {
+    return `<section class="section">
+      <div class="container">
+        <div class="section-head narrow"><p class="eyebrow">How it works</p><h2>Four small moves. No full system required.</h2></div>
+        <ol class="step-list">
+          <li><span>1</span><div><h3>Brain dump the task</h3><p>Write the task as it feels, even if it is messy or incomplete.</p><p class="benefit">You do not need to organize the task before starting.</p></div></li>
+          <li><span>2</span><div><h3>Check your energy</h3><p>Choose how heavy the task feels today so the starting point can stay realistic.</p><p class="benefit">The task meets your current capacity.</p></div></li>
+          <li><span>3</span><div><h3>Get one first move</h3><p>Gomentum suggests a small action that can begin the task without requiring a full plan.</p><p class="benefit">You see a doorway into the task.</p></div></li>
+          <li><span>4</span><div><h3>Start for three minutes</h3><p>Use a short timer to enter the task gently, then decide whether to continue.</p><p class="benefit">Starting becomes smaller than finishing.</p></div></li>
+        </ol>
+      </div>
+    </section>`;
+  }
   return `<section class="section">
     <div class="container">
-      <div class="section-head narrow"><p class="eyebrow">How it works</p><h2>Three steps. No big setup.</h2></div>
+      <div class="section-head narrow"><p class="eyebrow">How it works</p><h2>From stuck to started in three small moves.</h2></div>
       <ol class="step-list">
-        <li><span>1</span><div><h3>Type what feels stuck</h3><p>No categories. No project board. Just the task.</p></div></li>
-        <li><span>2</span><div><h3>Get one tiny first move</h3><p>Gomentum finds the smallest useful entrance.</p></div></li>
-        <li><span>3</span><div><h3>Start with a short timer</h3><p>Three minutes is enough to break the freeze.</p></div></li>
+        <li><span>1</span><div><h3>Write the messy task</h3><p>Start with the task as it feels right now. It does not need to be organized.</p></div></li>
+        <li><span>2</span><div><h3>Get one first move</h3><p>Gomentum turns the task into one small action you can begin.</p></div></li>
+        <li><span>3</span><div><h3>Start for three minutes</h3><p>Use a short timer to enter the task without making a big commitment.</p></div></li>
       </ol>
     </div>
   </section>`;
@@ -396,7 +410,7 @@ function productPage() {
     '3-minute timer': 'Benefit: it gives you a short start line, not a long commitment.',
     'Gentle reflection': 'Benefit: it helps you notice progress without turning it into another task.'
   };
-  return `${innerHero('Product', 'A calm flow for the first move.', 'See the core Gomentum moments without a heavy dashboard.')}
+  return `${innerHero('Product', 'A calmer way to move from stuck to started.', 'Gomentum is built around the moment before action. It helps you empty the messy task from your head, choose one starting point, and begin with less pressure.')}
   <section class="section"><div class="container product-grid">
     ${productScreens.map((screen) => `<article class="product-feature"><div>${phoneMockup(screen)}</div><div><p class="eyebrow">${screen.eyebrow}</p><h2>${screen.title}</h2><p>${screen.body}</p><p class="benefit">${benefits[screen.title] || 'Benefit: it makes starting feel smaller.'}</p></div></article>`).join('')}
   </div></section>
@@ -405,94 +419,94 @@ function productPage() {
 
 function featuresPage() {
   const features = [
-    ['Brain dump support', 'Put the messy thought somewhere safe before it becomes a plan.'],
-    ['Mood check-in', 'Start with your current energy, not an ideal version of yourself.'],
-    ['First move generator', 'Turn a large task into one clear physical action.'],
-    ['3-minute start', 'Begin with a short timer that does not feel threatening.'],
-    ['Gentle reflection', 'Notice that you started. That counts.'],
-    ['Beta honesty', 'The product clearly separates what is live from what is still improving.']
+    ['Brain dump', 'Clear the mental clutter before trying to act.'],
+    ['Mood check-in', 'Start from your current energy level, not from an ideal version of your day.'],
+    ['Task breakdown', 'Turn a large, unclear task into smaller actions that feel easier to enter.'],
+    ['3-minute start timer', 'Begin with a short, low-pressure session.'],
+    ['Gentle reflection', 'Notice progress without turning the session into a performance test.'],
+    ['Beta honesty', 'The product is still improving, so feature labels stay honest and simple.']
   ];
-  return `${innerHero('Features', 'Everything supports one job: starting.', 'The feature set is intentionally small so the product does not become another task.')}
+  return `${innerHero('Features', 'Features for starting, not just organizing.', 'Gomentum is not trying to become another full task manager. Its core features are designed to reduce the pressure of beginning.')}
   <section class="section"><div class="container light-card-grid three">${features.map(([h,p]) => `<article class="light-card"><h2>${h}</h2><p>${p}</p></article>`).join('')}</div></section>
   <section class="section soft-section"><div class="container split"><div><h2>Not a full productivity system.</h2><p>Gomentum is for the moment before calendars, Kanban boards, and task managers become useful.</p></div>${phoneMockup(productScreens[2])}</div></section>`;
 }
 
 function howPage() {
-  return `${innerHero('How it works', 'A clean path from stuck to started.', 'The flow is short because the user may already be tired.')}
-  ${stepsSection()}
-  <section class="section soft-section"><div class="container"><div class="journey"><div>Messy task</div><span aria-hidden="true">→</span><div>One first move</div><span aria-hidden="true">→</span><div>3-minute start</div><span aria-hidden="true">→</span><div>Gentle reflection</div></div></div></section>
-  ${finalCta('Start with the first move only.', 'That is enough for now.')}`;
+  return `${innerHero('How Gomentum works', 'From stuck to started in a few clear moves.', 'Brain dump what is on your mind. Check in with your energy. Let Gomentum suggest one starting point. Begin with three minutes, then continue, pause, or stop without turning the session into a test of willpower.')}
+  ${stepsSection(true)}
+  <section class="section soft-section"><div class="container"><div class="journey"><div>Brain dump the task</div><span aria-hidden="true">→</span><div>Check your energy</div><span aria-hidden="true">→</span><div>Get one first move</div><span aria-hidden="true">→</span><div>Start for three minutes</div></div></div></section>
+  ${finalCta('You do not need a perfect plan to begin.', 'Start with one messy task and one small first move.')}`;
 }
 
 function useCasesPage() {
-  return `${innerHero('Use cases', 'Different tasks. Same gentle entrance.', 'Gomentum helps when the task is important but the start feels blocked.')}
+  return `${innerHero('Use cases', 'Use Gomentum when the task feels too big to enter.', 'Gomentum can support work, study, life admin, cleaning, creative tasks, and other moments where you know what to do but cannot begin.')}
   <section class="section"><div class="container light-card-grid two">${useCases.map(useCaseCard).join('')}</div></section>
   <section class="section soft-section"><div class="container split">${editorialVisual('A calm editorial visual showing a desk, notebook, and phone with a tiny first step.')}
   <div><h2>Use it before the pressure builds.</h2><p>The best moment to use Gomentum is when you notice yourself avoiding the first step.</p>${cta()}</div></div></section>`;
 }
 
 function resourcesPage() {
-  return `${innerHero('Resources', 'Short guides for starting again.', 'Each resource points back to one practical action, not a long productivity theory.')}
+  return `${innerHero('Resources', 'Task initiation resources for getting unstuck.', 'Guides for understanding task paralysis, ADHD-style overwhelm, procrastination, brain dumps, and tiny first steps.')}
   <section class="section"><div class="container resource-grid">${resources.map((item) => `<a class="resource-card" href="${item.href}"><span>${item.category}</span><h2>${item.title}</h2><p><strong>Problem:</strong> ${item.problem}</p><p class="try-line"><strong>Try this now:</strong> ${item.action}</p><small>${item.time}</small></a>`).join('')}</div></section>
   <section class="section soft-section"><div class="container split"><div><h2>Choose the guide that matches today.</h2><p>If you are frozen, start with the task paralysis guide. If you need to understand the product, see how it works. If you want examples, scan the use cases.</p><p class="link-row"><a href="/product/">Product</a><a href="/how-it-works/">How it works</a><a href="/use-cases/">Use cases</a></p></div>${editorialVisual('A warm editorial visual of a phone beside a calm reading card.')}</div></section>`;
 }
 
 function pricingPage() {
-  return `${innerHero('Pricing', 'Free during beta. No card needed.', 'Use Gomentum while the product improves with early users. Pricing should feel safe, simple, and honest.')}
+  return `${innerHero('Pricing', 'Simple beta access while Gomentum is still improving.', 'Gomentum is currently in beta. Early users can try the core task-starting flow while the product is being improved.')}
   <section class="section"><div class="container pricing-layout">
-    <article class="pricing-card featured"><p class="eyebrow">Beta access</p><h2>Free during beta</h2><p class="price">$0</p><p>Best for overwhelmed users who want to try first-move support before committing to another tool.</p><ul><li>No card required</li><li>Public first-move demo</li><li>Beta feedback welcome</li><li>Clear notice before any paid plan</li></ul>${cta('Join beta', '/contact/')}</article>
-    <article class="pricing-card"><p class="eyebrow">May become paid later</p><h2>Starter</h2><p class="price">Planned</p><p>For daily task initiation, short focus sessions, and simple progress history after beta.</p></article>
-    <article class="pricing-card"><p class="eyebrow">Later</p><h2>Plus</h2><p class="price">Planned</p><p>For more AI sessions, personalization, reflection history, and deeper first-move support.</p></article>
+    <article class="pricing-card featured"><p class="eyebrow">Beta access</p><h2>Beta access available</h2><p class="price">Available</p><p>Best for people who want to try the product while the team improves task breakdown, product polish, and the full starting experience.</p><ul><li>Core first-move demo</li><li>Beta feedback welcome</li><li>Clear notice before any paid plan</li><li>Early feedback helps shape the product</li></ul>${cta('Join the Beta', '/contact/')}</article>
+    <article class="pricing-card"><p class="eyebrow">May become paid later</p><h2>Starter</h2><p class="price">Future packaging</p><p>Final pricing may change as the product improves. Any paid plan details should be treated as future packaging unless already confirmed.</p></article>
+    <article class="pricing-card"><p class="eyebrow">Later</p><h2>Plus</h2><p class="price">Future packaging</p><p>More AI sessions, personalization, reflection history, and deeper first-move support may become part of later plans.</p></article>
   </div></section>
-  <section class="section soft-section"><div class="container faq-lite"><h2>Pricing FAQ</h2>${simpleFaq([['Do I need a card?', 'No. Beta access does not require a card.'], ['Who is the beta best for?', 'People who want help starting work, study, life admin, home, or creative tasks.'], ['What might become paid later?', 'More AI sessions, personalization, history, and advanced support may become part of paid plans.'], ['Will I be charged suddenly?', 'No. Users should be told clearly before paid plans are introduced.']])}</div></section>`;
+  <section class="section soft-section"><div class="container faq-lite"><h2>Pricing FAQ</h2>${simpleFaq([['Who is beta access best for?', 'People who want help starting work, study, life admin, home, or creative tasks.'], ['What may become paid later?', 'More AI sessions, personalization, history, and advanced support may become part of paid plans.'], ['Will pricing change?', 'Pricing may change as the product improves. Users should be told clearly before any paid plan affects access.'], ['Where do I join?', 'Use the contact page to ask about beta feedback or early access.']])}</div></section>`;
 }
 
 function faqPage() {
-  return `${innerHero('FAQ', 'Short answers for common worries.', 'Grouped so users can find the answer without reading everything.')}
+  return `${innerHero('FAQ', 'Questions about Gomentum, answered clearly.', 'Grouped so users can find the answer without reading everything.')}
   <section class="section"><div class="container faq-page">${Object.entries(faqs).map(([group, qs]) => `<section class="faq-group"><h2>${group}</h2>${simpleFaq(qs)}</section>`).join('')}</div></section>`;
 }
 
 function contactPage() {
   const configured = !FORMSPREE_ENDPOINT.includes('YOUR_FORMSPREE_ID');
-  return `${innerHero('Contact', 'Questions, feedback, or accessibility needs?', 'Send a short message. The form is set up for Formspree, with a clear success state for testing and live use.')}
+  return `${innerHero('Contact', 'Contact Gomentum', 'Send feedback, beta questions, accessibility issues, or partnership notes. Short messages are welcome.')}
   <section class="section"><div class="container contact-grid"><form class="contact-form" data-contact-form action="${FORMSPREE_ENDPOINT}" method="POST" data-formspree-configured="${configured ? 'true' : 'false'}">
     <p class="contact-direct">For beta feedback, partnerships, support, or accessibility issues, use the form below or email <a href="mailto:hello@gomentum.app">hello@gomentum.app</a>.</p>
     <input type="hidden" name="_subject" value="New Gomentum website contact message" />
-    <label for="reason">What is this about?</label><select id="reason" name="reason" required><option>Beta feedback</option><option>Support question</option><option>Partnership</option><option>Accessibility issue</option><option>Other</option></select>
-    <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-help" /><p id="name-help" class="sr-only">Enter your name.</p>
-    <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help" /><p id="email-help" class="sr-only">Enter the email address we should reply to.</p>
+    <label for="reason">Reason for contacting</label><select id="reason" name="reason" required><option>Beta feedback</option><option>Support question</option><option>Product feedback</option><option>Accessibility issue</option><option>Partnership</option><option>Other</option></select>
+    <label for="name">Name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-help" /><p id="name-help" class="sr-only">Enter your name.</p>
+    <label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help" /><p id="email-help" class="sr-only">Enter the email address we should reply to.</p>
     <label for="message">Message</label><textarea id="message" name="message" rows="6" required aria-describedby="contact-help"></textarea>
-    <p id="contact-help" class="helper">This form uses a Formspree endpoint. Set the FORMSPREE_ENDPOINT environment variable before collecting live submissions.</p>
-    <button class="btn btn-primary" type="submit">Send message</button>
+    <p id="contact-help" class="helper">Your message will be used only to respond to your request or improve the beta experience.</p>
+    <button class="btn btn-primary" type="submit">Send Message</button>
     <p class="form-status" role="status" aria-live="polite"></p>
   </form><aside class="contact-note"><h2>Helpful things to send</h2><ul><li>What page or feature you used.</li><li>What felt confusing or heavy.</li><li>What would make starting easier.</li></ul><p class="small">For accessibility feedback, tell us what was hard to read, navigate, or use.</p></aside></div></section>`;
 }
 
 function privacyPage() {
-  return `${innerHero('Privacy', 'Your task data should feel safe.', 'This plain-English policy explains what may be collected and what is not collected.')}
+  return `${innerHero('Privacy', 'Privacy at Gomentum', 'Gomentum is designed to be calm and trustworthy. This page explains what information may be collected, how it may be used, and how users can ask questions about their data.')}
   <section class="section"><div class="container prose-card">
-    <h2>What we may collect</h2><p>We may collect your name, email address, contact messages, beta feedback, and basic website usage information if analytics is enabled.</p>
-    <h2>What we do not collect in the public demo</h2><p>The public first-move demo runs locally in your browser. It does not need an account and should not send your task text to a server.</p>
-    <h2>How task inputs may be used in the product</h2><p>If you use a logged-in product version, task inputs may be used to create first moves, short steps, and session support. The product should avoid sharing personal task data with unrelated third parties.</p>
+    <h2>Task inputs should stay private</h2><p>We only ask for information needed to provide the product, receive feedback, or respond to contact requests.</p>
+    <h2>The public demo is limited</h2><p>The website demo is a page preview. It does not save the task you type into the public demo.</p>
+    <h2>Users should stay in control</h2><p>Product data should be handled with clear consent and user control.</p>
     <h2>Cookies and analytics</h2><p>The website may use basic analytics to understand page visits, CTA clicks, and form usage. Analytics should not include private task text, names, messages, or sensitive personal content.</p>
     <h2>Sharing</h2><p>We do not sell personal information. We may use trusted tools for hosting, forms, analytics, and email if needed to operate the website.</p>
-    <h2>Deletion requests</h2><p>You can request deletion of contact messages or beta data by using the Contact page. Use the subject “Data deletion request.”</p>
+    <h2>Privacy questions and deletion requests</h2><p>For privacy questions or deletion requests, contact the Gomentum team through the Contact page.</p>
   </div></section>`;
 }
 
 function termsPage() {
-  return `${innerHero('Terms', 'Simple beta terms.', 'These terms explain the basic expectations for using the Gomentum website and beta experience.')}
+  return `${innerHero('Terms', 'Basic terms for using Gomentum.', 'These terms explain how the public website and beta-stage product should be used.')}
   <section class="section"><div class="container prose-card">
-    <h2>Beta status</h2><p>Gomentum is an early product. Some features may change, improve, or be removed as the product is tested.</p>
+    <h2>Beta product status</h2><p>Gomentum is a beta-stage product. Some features may be available now, improving, or planned for later versions.</p>
     <h2>Use the website responsibly</h2><p>Do not use the website to submit harmful, illegal, abusive, or private information that should not be shared online.</p>
-    <h2>No medical promise</h2><p>Gomentum is not medical advice, therapy, diagnosis, or treatment. It is a task initiation support tool.</p>
+    <h2>No medical claims</h2><p>Gomentum is not medical advice, therapy, diagnosis, or treatment. It is a task initiation support tool.</p>
     <h2>Availability</h2><p>The website may be updated or temporarily unavailable while improvements are made.</p>
     <h2>Contact</h2><p>Questions about these terms can be sent through the Contact page.</p>
   </div></section>`;
 }
 
 function accessibilityPage() {
-  return `${innerHero('Accessibility', 'Designed to reduce friction.', 'Accessibility is part of the product experience because overwhelmed users need clarity, not extra work.')}
+  return `${innerHero('Accessibility', 'Accessibility at Gomentum', 'Gomentum is designed for people who may already feel overwhelmed. The website should be readable, keyboard-friendly, responsive, and clear on mobile.')}
   <section class="section"><div class="container prose-card"><p><strong>If something on the site is hard to read, navigate, or use, we want to know.</strong> Send accessibility feedback through the Contact page or email hello@gomentum.app.</p><p>This page explains the current accessibility commitments. The separate <a href="/evidence/">Evidence & QA page</a> is where final screenshots, Lighthouse checks, WAVE checks, and form test proof should be added.</p></div></section>
   <section class="section soft-section"><div class="container light-card-grid two">
     ${[
@@ -507,33 +521,31 @@ function accessibilityPage() {
 }
 
 function adhdPage() {
-  return `${innerHero('ADHD task initiation', 'Support for the moment before starting.', 'Gomentum uses ADHD-friendly design patterns without making medical claims.')}
+  return `${innerHero('ADHD task initiation', 'ADHD task initiation support for starting small.', 'Task initiation can be difficult when the first step feels unclear, too large, or too heavy to enter. Gomentum gives you a smaller starting point without asking you to build a full productivity system.')}
   <section class="section"><div class="container prose-card article-prose">
-    <h2>What this page is about</h2><p>ADHD-style task initiation difficulty can feel like knowing exactly what to do while still being unable to begin. Gomentum focuses on the entry point: one task, one tiny first move, and a short start.</p>
-    <h2>Who this is for</h2><p>This is for people who feel blocked at the first step, especially on low-energy, overwhelmed, scattered, or deadline-heavy days.</p>
-    <h2>Common signs</h2><ul><li>You reread the same task but do not begin.</li><li>You open several apps and still avoid the work.</li><li>You wait for pressure before starting.</li><li>You feel shame even when the task is small.</li></ul>
+    <h2>A clear note first</h2><p>Gomentum is not a medical, diagnostic, or therapy tool. It is a task support tool that helps you take a smaller first step.</p>
+    <h2>Who this is for</h2><p>This page is for people who know what they need to do but still feel stuck at the starting line, especially on low-energy, scattered, or overwhelmed days.</p>
+    <h2>Common signs</h2><ul><li>You reread the same task but do not begin.</li><li>You open several apps and still avoid the work.</li><li>You wait for pressure before starting.</li><li>The first step feels larger than the whole task should feel.</li></ul>
     <h2>What usually does not help</h2><p>More dashboards, bigger plans, harsh reminders, and shame-based motivation often add pressure. For many users, the missing piece is not another list. It is a smaller entrance.</p>
-    <h2>A simple 3-step method</h2><ol><li>Name the task in plain words.</li><li>Reduce it to one visible action.</li><li>Try that action for three minutes.</li></ol>
-    <h2>Example task breakdowns</h2>${exampleList([['Write my report', 'Open the document and write only the title.'], ['Study chapter 4', 'Open the chapter and read the first heading.'], ['Reply to emails', 'Open one message and write the first sentence.'], ['Clean my desk', 'Move five visible items into one pile.']])}
-    <h2>How Gomentum helps</h2><p>The product flow uses a task input, mood check-in, first-move result, 3-minute timer, and gentle reflection. See the <a href="/product/">Product page</a> for the screen flow or <a href="/how-it-works/">How It Works</a> for the short explanation.</p>
-    <h2>Important note</h2><p>Gomentum is not a medical or therapy tool. It is a task support tool that helps you take a smaller first step.</p>
-    <div class="article-cta"><h2>Try it with one task</h2><p>Type one task you have been avoiding and see one small first move.</p>${cta('Try one small step', '/#demo')}</div>
+    <h2>What can make starting easier</h2><ul><li>Reduce the size of the first action.</li><li>Start with the task as it feels, not as it should look.</li><li>Use a short timer instead of a long commitment.</li><li>Avoid turning the session into a test of discipline.</li><li>Let one small action be enough to begin.</li></ul>
+    <h2>A simple 3-step method</h2><ol><li>Write one task in plain words.</li><li>Ask for one first move that is small enough to begin.</li><li>Try a 3-minute start, then continue, pause, or stop.</li></ol>
+    <h2>Example task breakdowns</h2>${exampleList([['Write my report', 'Open the document and write only the title.'], ['Study chapter 4', 'Open the notes and highlight only one heading you recognize.'], ['Reply to emails', 'Open one message and write only the greeting.'], ['Clean my room', 'Put only the clothes from the chair into one basket.']])}
+    <h2>How Gomentum helps</h2><p>The product flow uses a task input, mood check-in, first-move result, 3-minute timer, and gentle reflection. See the <a href="/product/">Product page</a> or <a href="/how-it-works/">How It Works</a> to understand the flow.</p>
+    <div class="article-cta"><h2>Try a 3-minute start.</h2><p>Write one task, get one first move, and begin without building a full plan.</p>${cta('Try a 3-Minute Start', '/#demo')}</div>
     <p class="link-row"><a href="/resources/">View related resources</a><a href="/task-paralysis-guide/">Read task paralysis guide</a><a href="/accessibility/">Accessibility commitments</a></p>
   </div></section>`;
 }
 
 function taskGuidePage() {
-  return `${innerHero('Task paralysis guide', 'Task paralysis is a starting problem.', 'This guide explains the stuck moment in plain language and gives one practical way forward.')}
+  return `${innerHero('Task paralysis guide', 'Task paralysis guide: why starting feels hard.', 'Task paralysis can feel like knowing what needs to be done but not being able to begin. The task may be important, simple, or urgent, but the first move still feels blocked.')}
   <section class="section"><div class="container prose-card article-prose">
-    <h2>Clear opening explanation</h2><p>Task paralysis is the moment when a task is known but the first action feels unreachable. It can happen with work, study, cleaning, messages, or personal admin.</p>
-    <h2>Who this is for</h2><p>This guide is for people who delay, freeze, scroll, over-plan, or wait for panic before beginning.</p>
-    <h2>Common signs</h2><ul><li>You keep thinking about the task without entering it.</li><li>The task feels bigger every time you look at it.</li><li>You try to plan everything before doing anything.</li><li>You feel relief only after the first tiny action is done.</li></ul>
-    <h2>What usually does not help</h2><p>Long task lists, harsh countdowns, and perfect productivity systems can make the task feel heavier. A smaller first move often works better because it removes the need to solve the entire task upfront.</p>
-    <h2>A simple 3-step method</h2><ol><li>Write the task in messy words.</li><li>Ask, “What is the smallest visible action?”</li><li>Do only that action for three minutes.</li></ol>
-    <h2>Example task breakdowns</h2>${exampleList([['Clean my room', 'Pick up five visible items and put them in one place.'], ['Start proposal', 'Open the proposal file and write the client name.'], ['Sort bills', 'Place all bills in one pile.'], ['Reply to messages', 'Open one message and write the first sentence.']])}
-    <h2>How to use this today</h2><p>Pick one task that has been sitting in your head. Do not organize the whole list. Write the task in plain words, choose the first visible action, and stop after three minutes if that is enough.</p>
-    <h2>Try Gomentum</h2><p>Gomentum turns a messy task into one tiny first move and a short start. It is not a medical or therapy tool. It is task support for the moment before starting.</p>
-    <div class="article-cta"><h2>Start with the smallest entrance</h2><p>The goal is not to finish everything. The goal is to begin without making the task heavier.</p>${cta('Try one small step', '/#demo')}</div>
+    <h2>Who this guide is for</h2><p>This guide is for people who feel stuck before starting, avoid tasks that matter, or feel overwhelmed by tasks that look small from the outside.</p>
+    <h2>Common signs</h2><ul><li>You know the task matters, but you keep delaying it.</li><li>The task feels too large to enter.</li><li>Opening the file, book, or app feels like the hardest part.</li><li>A normal to-do list makes the pressure worse.</li><li>You wait for the right mood, energy, or motivation before starting.</li></ul>
+    <h2>What usually does not help</h2><p>More pressure usually does not make starting easier. A longer list, a stricter plan, or another reminder may show you the work, but it may not create a clear entrance into the task.</p>
+    <h2>A simple 3-step method</h2><ol><li>Write the task exactly as it feels.</li><li>Make the first move smaller than you think it needs to be.</li><li>Start for three minutes, then choose whether to continue.</li></ol>
+    <h2>Example first moves</h2>${exampleList([['Clean my room', 'Put only the clothes from the chair into one basket.'], ['Write my report', 'Open the document and write only the title.'], ['Study for my exam', 'Open the notes and read one heading.'], ['Reply to an important email', 'Open the email and write only the greeting.']])}
+    <h2>How Gomentum uses this idea</h2><p>Gomentum turns the task into a small first move, then supports a short start so momentum has a chance to appear. It is not a medical or therapy tool. It is task support for the moment before starting.</p>
+    <div class="article-cta"><h2>Start with one small step.</h2><p>Type one task into Gomentum and get a tiny first move you can begin in three minutes.</p>${cta('Start One Small Step', '/#demo')}</div>
     <p class="link-row"><a href="/adhd-task-initiation/">Read ADHD task initiation support</a><a href="/resources/">View resources</a><a href="/product/">See the product flow</a></p>
   </div></section>`;
 }
@@ -557,11 +569,11 @@ function simpleFaq(items) {
 }
 
 function faqPreview() {
-  return `<section class="section"><div class="container narrow faq-lite"><h2>Questions before you try it?</h2>${simpleFaq([['Is this therapy?', 'No. Gomentum is not medical advice or treatment.'], ['Do I need an account for the demo?', 'No. The public demo runs in your browser.'], ['Is it free during beta?', 'Yes. No card is needed during beta.']])}<p><a href="/faq/">Read the full FAQ</a></p></div></section>`;
+  return `<section class="section"><div class="container narrow faq-lite"><h2>Questions before you try it?</h2>${simpleFaq([['Is this therapy?', 'No. Gomentum is not medical advice or treatment.'], ['Do I need an account for the demo?', 'No. The public demo runs in your browser.'], ['Is it beta access available?', 'Yes. Clear notice before any paid plan is needed during beta.']])}<p><a href="/faq/">Read the full FAQ</a></p></div></section>`;
 }
 
 function trustStrip() {
-  return `<section class="trust-strip"><div class="container trust-row"><span>No-account demo</span><span>Runs in your browser</span><span>No medical claims</span><span>Free during beta</span></div></section>`;
+  return `<section class="trust-strip"><div class="container trust-row"><span>No-account demo</span><span>Runs in your browser</span><span>No medical claims</span><span>Beta access available</span></div></section>`;
 }
 
 function trustProof() {
@@ -582,8 +594,8 @@ function table(headers, rows, className = '') {
 }
 
 function evidencePage() {
-  return `${innerHero('Evidence & QA', 'Proof slots for final submission.', 'This page keeps accessibility, SEO, form, and performance evidence visible without inventing scores or proof.')}
-  <section class="section"><div class="container prose-card"><h2>Evidence status</h2><p>This page does not fake Lighthouse scores, WAVE results, testimonials, or user numbers. Add real screenshots and scores after testing the live deployment.</p><p>Evidence folders are included at <code>/public/evidence/</code> for source files and published under <code>/evidence/</code> in the built site.</p></div></section>
+  return `${innerHero('Evidence & QA', 'Evidence & QA', 'This page records the checks used to support mobile readiness, SEO basics, accessibility, contact flow, and production quality.')}
+  <section class="section"><div class="container prose-card"><h2>Evidence status</h2><p>This page does not fake Lighthouse scores, WAVE results, testimonials, or user numbers. Add real screenshots and scores after testing the live deployment.</p><p>Evidence folders are included at <code>/public/evidence/</code> for source files and published under <code>/evidence/</code> in the built site.</p><p>Scores and screenshots should be replaced with real test evidence after the final deployed version is tested.</p></div></section>
   <section class="section soft-section"><div class="container"><div class="section-head narrow"><p class="eyebrow">Screenshot slots</p><h2>Replace these with real test evidence.</h2></div><div class="evidence-grid">${evidenceAssets.map(([folder, file, alt]) => evidenceImage(folder, file, alt)).join('')}</div></div></section>
   <section class="section"><div class="container"><div class="section-head narrow"><p class="eyebrow">Lighthouse</p><h2>Lighthouse results table</h2><p>Fill this after running Lighthouse on the live website. Pending means not yet tested.</p></div>${table(['Page','Performance','Accessibility','Best Practices','SEO','Test Type','Date Tested'], lighthouseRows)}</div></section>
   <section class="section soft-section"><div class="container"><div class="section-head narrow"><p class="eyebrow">WAVE</p><h2>WAVE results table</h2><p>Fill this after testing the live pages with WAVE. Alerts should be reviewed manually.</p></div>${table(['Page','Errors','Contrast Errors','Alerts','Fix Summary','Status'], waveRows)}</div></section>
@@ -630,7 +642,7 @@ function schemaFor(page) {
       operatingSystem: 'Web',
       description: page.description,
       url: SITE_URL,
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Free during beta' }
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', description: 'Beta access available' }
     };
   }
   if (page.slug === '/faq/') {
@@ -737,11 +749,11 @@ function js() { return `(() => {
           if (!response.ok) throw new Error('Formspree submission failed');
         }
         form.reset();
-        if (status) { status.className = 'form-status success'; status.textContent = configured ? 'Thanks. Your message has been sent.' : 'Success state shown. Add a real FORMSPREE_ENDPOINT value before collecting live messages.'; }
+        if (status) { status.className = 'form-status success'; status.textContent = configured ? 'Thanks. Your message has been sent.' : 'Thanks. Your message is ready to send once the form endpoint is configured.'; }
       } catch (error) {
         if (status) { status.className = 'form-status error'; status.textContent = 'That did not send. Please email hello@gomentum.app instead.'; }
       } finally {
-        if (submit) { submit.disabled = false; submit.textContent = 'Send message'; }
+        if (submit) { submit.disabled = false; submit.textContent = 'Send Message'; }
       }
     });
   }

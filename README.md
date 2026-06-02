@@ -1,87 +1,58 @@
-# Gomentum Website Phase 6 Implementation
+# Gomentum Website
 
-This is a production-ready Next.js App Router marketing website for the Gomentum Website Growth, SEO & Conversion Optimization task.
+This is the restored clean Gomentum website package. It keeps the full website output and the build scripts, while removing only non-required temporary notes and empty folders.
 
 ## What is included
 
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- Inter-first system font stack
-- 13 public routes
-- Mobile-first layouts
-- Static first-step demo
-- Contact form with client-side validation states
-- Newsletter form with client-side validation state
-- Accessible FAQ accordion using native details and summary
-- Build-safe font implementation with Inter fallback
-- Unique metadata per page
-- Open Graph and Twitter metadata
-- Sitemap and robots routes
-- Organization, SoftwareApplication, FAQPage, and Article JSON-LD schema
-- Privacy, Terms, and Accessibility pages
-- Honest beta language and no fake testimonials or medical claims
+- `scripts/` - source build, validation, and local server scripts
+- `public/evidence/` - evidence placeholder assets
+- `dist/` - generated static website pages and assets
+- `package.json` - project commands
+- `vercel.json` - deployment config
 
-## Routes
+## Pages included
 
-- `/`
-- `/how-it-works`
-- `/features`
-- `/adhd-task-initiation`
-- `/use-cases`
-- `/pricing`
-- `/resources`
-- `/task-paralysis-guide`
-- `/faq`
-- `/contact`
-- `/privacy`
-- `/terms`
-- `/accessibility`
+1. Home `/`
+2. Product `/product/`
+3. Features `/features/`
+4. How It Works `/how-it-works/`
+5. Use Cases `/use-cases/`
+6. Resources `/resources/`
+7. Pricing `/pricing/`
+8. FAQ `/faq/`
+9. Contact `/contact/`
+10. Privacy `/privacy/`
+11. Terms `/terms/`
+12. Accessibility `/accessibility/`
+13. Evidence & QA `/evidence/`
+14. ADHD Task Initiation `/adhd-task-initiation/`
+15. Task Paralysis Guide `/task-paralysis-guide/`
 
-## Setup
+## Local commands
 
 ```bash
 npm install
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
-## Build
-
-```bash
 npm run build
-npm run start
+npm run validate
+npm start
 ```
 
-## Lint
+Then open:
 
-```bash
-npm run lint
+```txt
+http://localhost:3000
 ```
 
-## Deployment to Vercel
+## Vercel settings
 
-1. Push this project to a GitHub repository.
-2. Go to Vercel and import the repository.
-3. Set framework preset to Next.js.
-4. Add environment variable if needed:
-   - `NEXT_PUBLIC_SITE_URL=https://your-live-domain.vercel.app`
-5. Deploy.
-6. After deployment, test:
-   - `/sitemap.xml`
-   - `/robots.txt`
-   - all 13 routes
-   - mobile layout at 390px width
-   - interactive demo states
-   - FAQ keyboard behavior
-   - form validation states
-   - Lighthouse Performance, Accessibility, Best Practices, and SEO
+```txt
+Framework Preset: Other
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
+Root Directory: ./
+```
 
-## Known limitations before live launch
+## GitHub push note
 
-- The public demo is static/local-rule-based, not live AI.
-- The contact and newsletter forms show client-side success states. Connect Formspree, Tally, or a Vercel Serverless Function before real lead capture.
-- Pricing is beta-first and marks future Starter/Plus pricing as subject to confirmation.
-- Privacy and Terms pages are practical placeholders and should be reviewed before public launch.
-- No real testimonials were invented. Add only permission-based testimonials later.
+This package keeps `dist/` visible and not ignored, so the generated page files will appear when you push to GitHub. `node_modules`, `.env`, and `.vercel` are ignored.

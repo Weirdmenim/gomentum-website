@@ -1,0 +1,19 @@
+Gomentum researched copy implementation
+
+Base: current Gomentum final proof/evidence website.
+Purpose: apply the researched copy replacement prompt without redesigning the website or reducing page count.
+
+Implemented:
+- Global CTA copy changed to Start One Small Step.
+- Secondary CTA capitalization changed to See How It Works.
+- Beta pricing copy made honest and safer: Beta access available and clear notice before any paid plan.
+- Homepage hero, demo, emotional section, step flow, trust strip, and final CTA updated.
+- How It Works, Features, Use Cases, Resources, Pricing, FAQ, Contact, ADHD Task Initiation, Task Paralysis Guide, Privacy, Terms, and Accessibility copy updated.
+- Privacy and Terms pages no longer include public placeholder legal wording.
+- ADHD-related wording avoids medical, diagnostic, treatment, cure, and clinical-proof claims.
+- Fake testimonials, fake waitlist counts, fake scores, and fake proof were not added.
+
+Validation:
+- npm run build passed.
+- npm run validate passed.
+- Local smoke test returned 200 for key routes, sitemap.xml, and robots.txt.
