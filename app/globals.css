@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  background: radial-gradient(circle at top right, rgba(245, 166, 35, 0.16), transparent 32rem), var(--color-bg-secondary);
+  background: var(--color-bg-secondary);
   color: var(--color-text-on-dark);
   font-size: 16px;
   line-height: 1.6;
@@ -71,10 +71,7 @@ summary:focus-visible {
 }
 
 .surface-grid {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 42px 42px;
+  background-image: none;
 }
 
 .card-border {
@@ -91,11 +88,7 @@ summary:focus-visible {
 }
 
 .noise-overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at 20% 10%, rgba(0, 200, 160, 0.08), transparent 28rem), radial-gradient(circle at 95% 20%, rgba(245, 166, 35, 0.12), transparent 22rem);
+  content: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

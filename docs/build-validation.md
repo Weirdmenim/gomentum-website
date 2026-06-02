@@ -1,20 +1,41 @@
 # Build Validation
 
-Validated in the implementation environment after dependencies were installed.
+Validation date: June 2, 2026
 
 ## Commands run
 
 ```bash
+npm install --no-audit --no-fund
 npm run lint
 npm run build
 ```
 
 ## Result
 
-- `npm run lint`: passed
-- `npm run build`: passed
-- Static routes generated: 13 public pages plus `/sitemap.xml`, `/robots.txt`, and `/_not-found`
+- Dependency install completed successfully.
+- ESLint completed successfully.
+- Next.js production build completed successfully.
+- All public routes prerendered successfully.
+- `/sitemap.xml` and `/robots.txt` remain included.
 
-## Font note
+## Routes generated
 
-The visual system uses an Inter-first system font stack in CSS. `next/font/google` was not used in the final package because it requires a Google Fonts fetch during build and can fail in offline or restricted CI environments. This keeps the submitted project build-safe. If the deployment environment has reliable Google Fonts access and the builder wants to enforce the exact Phase 6 next/font requirement, Inter can be added back in `app/layout.tsx`.
+- `/`
+- `/how-it-works`
+- `/features`
+- `/adhd-task-initiation`
+- `/use-cases`
+- `/pricing`
+- `/resources`
+- `/task-paralysis-guide`
+- `/faq`
+- `/contact`
+- `/privacy`
+- `/terms`
+- `/accessibility`
+- `/sitemap.xml`
+- `/robots.txt`
+
+## UX update validated
+
+The lightweight ADHD-focused homepage update was applied and the project still passes lint and production build.

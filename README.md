@@ -85,4 +85,3 @@ npm run lint
 - Pricing is beta-first and marks future Starter/Plus pricing as subject to confirmation.
 - Privacy and Terms pages are practical placeholders and should be reviewed before public launch.
 - No real testimonials were invented. Add only permission-based testimonials later.
-# gomentum-website

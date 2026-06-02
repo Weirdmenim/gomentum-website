@@ -89,9 +89,7 @@ export const pages: PageInfo[] = [
 ];
 
 export const mainNav = [
-  { label: "Product", href: "/features" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "For You", href: "/use-cases" },
-  { label: "Resources", href: "/resources" },
-  { label: "Pricing", href: "/pricing" }
+  { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" }
 ];
