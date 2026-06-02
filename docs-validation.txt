@@ -1,0 +1,22 @@
+Gomentum Proof & Evidence Pass
+
+Validation completed in sandbox:
+- npm run build: PASSED
+- npm run validate: PASSED
+- node --check dist/assets/app.js: PASSED
+- Local smoke test on port 3100: PASSED
+
+Verified routes/assets:
+- /
+- /evidence/
+- /contact/
+- /adhd-task-initiation/
+- /task-paralysis-guide/
+- /sitemap.xml
+- /robots.txt
+- /evidence/screenshots/mobile-home-placeholder.svg
+
+Notes:
+- Evidence page uses pending rows only. No Lighthouse scores, WAVE results, testimonials, or waitlist numbers were invented.
+- Contact form uses a Formspree placeholder endpoint: https://formspree.io/f/YOUR_FORMSPREE_ID
+- For live collection, set FORMSPREE_ENDPOINT before build or replace the placeholder in scripts/build.js.

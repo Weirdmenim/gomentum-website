@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Gomentum</title>
+  <meta name="description" content="Contact Gomentum for beta feedback, support questions, accessibility issues, partnerships, or product questions." />
+  <link rel="canonical" href="https://gomentum-website.vercel.app/contact" />
+  <meta property="og:title" content="Contact Gomentum" />
+  <meta property="og:description" content="Contact Gomentum for beta feedback, support questions, accessibility issues, partnerships, or product questions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gomentum-website.vercel.app/contact" />
+  <meta property="og:image" content="https://gomentum-website.vercel.app/assets/og-gomentum.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#FFF8EC" />
+  <link rel="icon" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Contact Gomentum","description":"Contact Gomentum for beta feedback, support questions, accessibility issues, partnerships, or product questions.","url":"https://gomentum-website.vercel.app/contact"}</script>
+</head>
+<body data-page="/contact/">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Gomentum home">
+        <span class="brand-mark" aria-hidden="true">G</span><span>Gomentum</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+      <nav class="desktop-nav" aria-label="Primary navigation"><a href="/product/">Product</a><a href="/how-it-works/">How it works</a><a href="/use-cases/">Use cases</a><a href="/resources/">Resources</a><a href="/pricing/">Pricing</a><a href="/faq/">FAQ</a><a class="nav-cta" href="/#demo">Try one small step</a></nav>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="/product/">Product</a><a href="/how-it-works/">How it works</a><a href="/use-cases/">Use cases</a><a href="/resources/">Resources</a><a href="/pricing/">Pricing</a><a href="/faq/">FAQ</a>
+      <a href="/contact/">Contact</a>
+      <a href="/evidence/">Evidence & QA</a>
+      <a href="/#demo" class="nav-cta">Try one small step</a>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="page-hero"><div class="container narrow"><p class="eyebrow">Contact</p><h1>Questions, feedback, or accessibility needs?</h1><p>Send a short message. The form is set up for Formspree, with a clear success state for testing and live use.</p></div></section>
+  <section class="section"><div class="container contact-grid"><form class="contact-form" data-contact-form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" data-formspree-configured="false">
+    <p class="contact-direct">For beta feedback, partnerships, support, or accessibility issues, use the form below or email <a href="mailto:hello@gomentum.app">hello@gomentum.app</a>.</p>
+    <input type="hidden" name="_subject" value="New Gomentum website contact message" />
+    <label for="reason">What is this about?</label><select id="reason" name="reason" required><option>Beta feedback</option><option>Support question</option><option>Partnership</option><option>Accessibility issue</option><option>Other</option></select>
+    <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-help" /><p id="name-help" class="sr-only">Enter your name.</p>
+    <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help" /><p id="email-help" class="sr-only">Enter the email address we should reply to.</p>
+    <label for="message">Message</label><textarea id="message" name="message" rows="6" required aria-describedby="contact-help"></textarea>
+    <p id="contact-help" class="helper">This form uses a Formspree endpoint. Set the FORMSPREE_ENDPOINT environment variable before collecting live submissions.</p>
+    <button class="btn btn-primary" type="submit">Send message</button>
+    <p class="form-status" role="status" aria-live="polite"></p>
+  </form><aside class="contact-note"><h2>Helpful things to send</h2><ul><li>What page or feature you used.</li><li>What felt confusing or heavy.</li><li>What would make starting easier.</li></ul><p class="small">For accessibility feedback, tell us what was hard to read, navigate, or use.</p></aside></div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">G</span><span>Gomentum</span></a>
+        <p>One tiny first move for the task you have been avoiding.</p>
+        <p class="small">Gomentum is not therapy, diagnosis, or medical treatment.</p>
+      </div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="/">Home</a><a href="/product/">Product</a><a href="/features/">Features</a><a href="/how-it-works/">How it works</a><a href="/use-cases/">Use cases</a><a href="/resources/">Resources</a><a href="/task-paralysis-guide/">Task paralysis guide</a><a href="/adhd-task-initiation/">ADHD task initiation</a><a href="/pricing/">Pricing</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/accessibility/">Accessibility</a><a href="/evidence/">Evidence & QA</a>
+      </div>
+    </div>
+  </footer>
+  <a class="sticky-cta" href="/#demo" aria-label="Try one small step">Try one small step</a>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
