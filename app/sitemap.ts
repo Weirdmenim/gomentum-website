@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { pages, siteUrl } from "@/data/pages";
+import { allRoutes, SITE_URL } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.map((page) => ({
-    url: `${siteUrl}${page.path === "/" ? "" : page.path}`,
-    lastModified: new Date(),
-    changeFrequency: page.path === "/" ? "weekly" : "monthly",
-    priority: page.path === "/" ? 1 : page.path.includes("task-paralysis") ? 0.9 : 0.75
+  return allRoutes.map((route) => ({
+    url: `${SITE_URL}${route === "/" ? "" : route}`,
+    lastModified: new Date("2026-06-02"),
+    changeFrequency: route.startsWith("/resources") ? "weekly" : "monthly",
+    priority: route === "/" ? 1 : route.startsWith("/resources") ? 0.75 : 0.8
   }));
 }

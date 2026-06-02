@@ -1,40 +1,10 @@
 # Gomentum Website
 
-This is the restored clean Gomentum website package. It keeps the full website output and the build scripts, while removing only non-required temporary notes and empty folders.
+Push-ready Gomentum website for the Website Growth, SEO & Conversion Optimization task.
 
-## What is included
+This package keeps the website source files and uses a lightweight static build into `dist/`. It also includes `next`, `react`, and `react-dom` in dependencies so a Vercel project that is still set to the Next.js preset will not show "No Next.js version detected".
 
-- `scripts/` - source build, validation, and local server scripts
-- `public/evidence/` - evidence placeholder assets
-- `dist/` - generated static website pages and assets
-- `package.json` - project commands
-- `vercel.json` - deployment config
-
-## Pages included
-
-1. Home `/`
-2. Product `/product/`
-3. Features `/features/`
-4. How It Works `/how-it-works/`
-5. Use Cases `/use-cases/`
-6. Resources `/resources/`
-7. Pricing `/pricing/`
-8. FAQ `/faq/`
-9. Contact `/contact/`
-10. Privacy `/privacy/`
-11. Terms `/terms/`
-12. Accessibility `/accessibility/`
-13. Evidence & QA `/evidence/`
-14. ADHD Task Initiation `/adhd-task-initiation/`
-15. Task Paralysis Guide `/task-paralysis-guide/`
-16. Blog: Task Paralysis `/resources/task-paralysis/`
-17. Blog: ADHD Task Initiation `/resources/adhd-task-initiation/`
-18. Blog: How to Start When Overwhelmed `/resources/how-to-start-when-overwhelmed/`
-19. Blog: Break Big Tasks Into Small Steps `/resources/break-big-tasks-into-small-steps/`
-20. Blog: Why To-Do Lists Do Not Help `/resources/why-to-do-lists-do-not-help-starting/`
-21. Blog: Brain Dump Productivity `/resources/brain-dump-productivity/`
-
-## Local commands
+## Local test
 
 ```bash
 npm install
@@ -43,22 +13,25 @@ npm run validate
 npm start
 ```
 
-Then open:
-
-```txt
-http://localhost:3000
-```
-
 ## Vercel settings
 
-```txt
-Framework Preset: Other
-Build Command: npm run build
-Output Directory: dist
-Install Command: npm install
-Root Directory: ./
-```
+Use these exact settings:
 
-## GitHub push note
+- Framework Preset: `Other` preferred. If your existing project is stuck on `Next.js`, the package still includes Next dependencies.
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Install Command: `npm install`
+- Root Directory: `./`
 
-This package keeps `dist/` visible and not ignored, so the generated page files will appear when you push to GitHub. `node_modules`, `.env`, and `.vercel` are ignored.
+## Important Git note
+
+Do not push generated folders. `.gitignore` already excludes:
+
+- `node_modules/`
+- `.next/`
+- `dist/`
+- `.vercel/`
+
+## Pages included
+
+The build generates 21 pages, including Home, Product, Features, How It Works, Use Cases, Resources, Pricing, FAQ, Contact, Privacy, Terms, Accessibility, Evidence & QA, ADHD Task Initiation, Task Paralysis Guide, and 6 Resources blog pages.

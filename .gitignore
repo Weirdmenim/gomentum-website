@@ -6,5 +6,3 @@ dist/
 *.tsbuildinfo
 npm-debug.log*
 .DS_Store
-docs-copy-update.txt
-docs-validation.txt

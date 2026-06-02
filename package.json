@@ -2,7 +2,7 @@
   "name": "gomentum-website",
   "version": "2.0.0",
   "private": true,
-  "description": "Static, Vercel-ready Gomentum website optimized for ADHD-friendly UX, SEO, conversion, and accessibility.",
+  "description": "Push-ready Gomentum website with static build output, Resources blog routes, evidence page, and source files. Next dependency is included for Vercel projects that are still set to the Next.js preset.",
   "scripts": {
     "build": "node scripts/build.js",
     "start": "node scripts/server.js",
@@ -15,5 +15,10 @@
     "seo",
     "conversion"
   ],
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "next": "15.5.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  }
 }
