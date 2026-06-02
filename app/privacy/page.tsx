@@ -1,31 +1,34 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/HeroSection";
-import { SectionHeader } from "@/components/SectionHeader";
 import { getPageMetadata } from "@/data/metadata";
 
 export const metadata: Metadata = getPageMetadata("/privacy");
 
+const principles = [
+  ["Task inputs should stay private", "A product like Gomentum may handle personal tasks, so the privacy message must be clear and easy to find."],
+  ["The public demo is limited", "The website demo is a page preview, not a full AI workflow. It should not collect private task data."],
+  ["Users should stay in control", "Future product data should be exportable, deletable, and handled with clear consent."],
+  ["Plain language matters", "Privacy content should be readable without legal stress or hidden meaning."]
+];
+
 export default function PrivacyPage() {
   return (
     <>
-      <HeroSection eyebrow="Privacy" title="Plain-English privacy for a product that handles" highlight="personal tasks.">
-        <p>This page is a practical placeholder for the final reviewed privacy policy. Replace with legal-approved copy before launch.</p>
+      <HeroSection eyebrow="Privacy" title="Plain-English privacy for personal" highlight="tasks.">
+        <p>A calm privacy page for a product that may handle thoughts, tasks, and unfinished work.</p>
       </HeroSection>
-      <section className="mx-auto max-w-3xl px-4 py-16 text-textgray md:px-6">
-        <SectionHeader title="Privacy principles" />
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-2xl font-bold text-warm">Task inputs should stay private.</h2>
-            <p className="mt-2">Users may type sensitive task details. The product should collect only what it needs, explain what happens to inputs, and avoid unnecessary sharing.</p>
-          </section>
-          <section>
-            <h2 className="text-2xl font-bold text-warm">The website demo is local-rule-based.</h2>
-            <p className="mt-2">The public first-step demo in this build does not connect to live AI. It uses local example rules to show the concept safely.</p>
-          </section>
-          <section>
-            <h2 className="text-2xl font-bold text-warm">Users should control their data.</h2>
-            <p className="mt-2">The product roadmap should include clear export, deletion, and account-control flows before wider launch.</p>
-          </section>
+
+      <section className="bg-warm px-4 py-10 text-charcoal md:px-6 md:py-14">
+        <div className="mx-auto max-w-3xl space-y-4">
+          {principles.map(([title, text]) => (
+            <section key={title} className="rounded-2xl border border-softgray bg-white p-5">
+              <h2 className="text-xl font-bold">{title}</h2>
+              <p className="mt-2 text-[#55576A]">{text}</p>
+            </section>
+          ))}
+          <p className="rounded-2xl bg-cream p-5 text-sm text-[#55576A]">
+            Placeholder note: this page should be reviewed and replaced with founder-approved policy copy before a full public launch.
+          </p>
         </div>
       </section>
     </>

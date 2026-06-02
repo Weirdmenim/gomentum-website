@@ -12,23 +12,18 @@ export default function FAQPage() {
   return (
     <>
       <HeroSection eyebrow="FAQ" title="Real questions." highlight="Honest answers.">
-        <p>Answers about Gomentum, beta access, privacy, ADHD-related use, AI task breakdown, and pricing.</p>
+        <p>Short answers about the product, beta access, privacy, and ADHD-related use.</p>
       </HeroSection>
-      <section className="mx-auto max-w-site px-4 py-16 md:px-6">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <h2 className="text-3xl font-bold text-warm">Frequently asked questions</h2>
-            <p className="mt-4 text-textgray">The goal is to remove doubt without hiding the beta-stage reality of the product.</p>
-          </div>
+
+      <section className="bg-warm px-4 py-10 text-charcoal md:px-6 md:py-14">
+        <div className="mx-auto max-w-3xl">
           <FAQAccordion />
+          <p className="mt-6 rounded-2xl bg-cream p-5 text-[#55576A]">
+            Gomentum is a productivity support tool. It is not medical advice, diagnosis, or therapy.
+          </p>
         </div>
       </section>
-      <section className="mx-auto max-w-site px-4 py-10 md:px-6">
-        <div className="rounded-panel bg-cream p-6 text-charcoal md:p-8">
-          <h2 className="text-2xl font-bold">Important note</h2>
-          <p className="mt-2">Gomentum is a productivity support tool, not medical or therapeutic advice. If you need care, support, or urgent help, contact a qualified professional or local emergency service.</p>
-        </div>
-      </section>
+
       <CTASection title="Still curious? Try one first move." />
       <JsonLd data={faqSchema} />
     </>

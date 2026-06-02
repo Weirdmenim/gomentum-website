@@ -4,26 +4,31 @@ import { getPageMetadata } from "@/data/metadata";
 
 export const metadata: Metadata = getPageMetadata("/terms");
 
+const terms = [
+  ["Use of the website", "The public website explains Gomentum and includes a lightweight demo for product understanding."],
+  ["Beta product status", "Gomentum is improving. Some features are live, some are being refined, and some are planned."],
+  ["No medical claims", "Gomentum is productivity support, not diagnosis, treatment, therapy, or professional medical advice."],
+  ["Future updates", "Pricing, features, and product terms may change. Users should be told clearly before major changes."]
+];
+
 export default function TermsPage() {
   return (
     <>
       <HeroSection eyebrow="Terms" title="Basic terms for the" highlight="Gomentum beta.">
-        <p>This is a website-ready terms placeholder. Replace with legal-approved terms before public launch.</p>
+        <p>Short, plain-language terms for the current website and beta positioning.</p>
       </HeroSection>
-      <section className="mx-auto max-w-3xl px-4 py-16 text-textgray md:px-6">
-        <div className="space-y-8">
-          <section>
-            <h2 className="text-2xl font-bold text-warm">Use of the website</h2>
-            <p className="mt-2">The website explains Gomentum and provides a static first-step demo. It should not be treated as medical, legal, financial, or emergency advice.</p>
-          </section>
-          <section>
-            <h2 className="text-2xl font-bold text-warm">Beta product status</h2>
-            <p className="mt-2">Gomentum is presented as a beta-stage product. Some features may be live, improving, or planned for later versions.</p>
-          </section>
-          <section>
-            <h2 className="text-2xl font-bold text-warm">No medical claims</h2>
-            <p className="mt-2">Gomentum supports task initiation and productivity. It does not diagnose, treat, cure, or replace professional care.</p>
-          </section>
+
+      <section className="bg-warm px-4 py-10 text-charcoal md:px-6 md:py-14">
+        <div className="mx-auto max-w-3xl space-y-4">
+          {terms.map(([title, text]) => (
+            <section key={title} className="rounded-2xl border border-softgray bg-white p-5">
+              <h2 className="text-xl font-bold">{title}</h2>
+              <p className="mt-2 text-[#55576A]">{text}</p>
+            </section>
+          ))}
+          <p className="rounded-2xl bg-cream p-5 text-sm text-[#55576A]">
+            Placeholder note: this page should be reviewed before a full public launch.
+          </p>
         </div>
       </section>
     </>

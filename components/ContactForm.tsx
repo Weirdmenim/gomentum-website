@@ -12,6 +12,7 @@ export function ContactForm() {
   const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("Beta access");
   const [message, setMessage] = useState("");
+  const hasError = state === "error";
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -27,11 +28,11 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={submit} className="card-border rounded-panel bg-carddark p-5 shadow-glow md:p-8" noValidate>
+    <form onSubmit={submit} className="rounded-panel border border-softgray bg-white p-5 md:p-8" noValidate>
       <div className="grid gap-5 md:grid-cols-2">
         <div className="md:col-span-2">
-          <label htmlFor="topic" className="block text-sm font-semibold text-warm">What is this about?</label>
-          <select id="topic" value={topic} onChange={(event) => setTopic(event.target.value)} className="mt-2 min-h-12 w-full rounded-button border border-softgray/20 bg-offblack/80 px-4 text-warm">
+          <label htmlFor="topic" className="block text-sm font-semibold text-charcoal">What is this about?</label>
+          <select id="topic" value={topic} onChange={(event) => setTopic(event.target.value)} className="mt-2 min-h-12 w-full rounded-button border border-softgray bg-warm px-4 text-charcoal">
             <option>Beta access</option>
             <option>Support question</option>
             <option>Product feedback</option>
@@ -39,26 +40,26 @@ export function ContactForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-warm">Your name</label>
-          <input id="name" value={name} onChange={(event) => setName(event.target.value)} className="mt-2 min-h-12 w-full rounded-button border border-softgray/20 bg-offblack/80 px-4 text-warm" placeholder="Enter your name" autoComplete="name" />
+          <label htmlFor="name" className="block text-sm font-semibold text-charcoal">Your name</label>
+          <input id="name" value={name} onChange={(event) => setName(event.target.value)} className="mt-2 min-h-12 w-full rounded-button border border-softgray bg-warm px-4 text-charcoal" placeholder="Enter your name" autoComplete="name" aria-invalid={hasError} aria-describedby={hasError ? "contact-error" : undefined} />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-warm">Email address</label>
-          <input id="email" value={email} onChange={(event) => setEmail(event.target.value)} className="mt-2 min-h-12 w-full rounded-button border border-softgray/20 bg-offblack/80 px-4 text-warm" placeholder="Enter your email" autoComplete="email" type="email" />
+          <label htmlFor="email" className="block text-sm font-semibold text-charcoal">Email address</label>
+          <input id="email" value={email} onChange={(event) => setEmail(event.target.value)} className="mt-2 min-h-12 w-full rounded-button border border-softgray bg-warm px-4 text-charcoal" placeholder="Enter your email" autoComplete="email" type="email" aria-invalid={hasError} aria-describedby={hasError ? "contact-error" : undefined} />
         </div>
         <div className="md:col-span-2">
-          <label htmlFor="message" className="block text-sm font-semibold text-warm">Message</label>
-          <textarea id="message" value={message} onChange={(event) => setMessage(event.target.value)} className="mt-2 min-h-36 w-full rounded-button border border-softgray/20 bg-offblack/80 px-4 py-3 text-warm" placeholder="Tell us more..." maxLength={1000} />
-          <p className="mt-2 text-right text-sm text-textgray">{message.length} / 1000</p>
+          <label htmlFor="message" className="block text-sm font-semibold text-charcoal">Message</label>
+          <textarea id="message" value={message} onChange={(event) => setMessage(event.target.value)} className="mt-2 min-h-36 w-full rounded-button border border-softgray bg-warm px-4 py-3 text-charcoal" placeholder="Tell us more..." maxLength={1000} aria-invalid={hasError} aria-describedby={hasError ? "contact-error" : "message-help"} />
+          <p id="message-help" className="mt-2 text-right text-sm text-[#55576A]">{message.length} / 1000</p>
         </div>
       </div>
       <div className="mt-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <p className="flex items-center gap-2 text-sm text-textgray"><Icon name="lock" className="h-4 w-4 text-teal" /> Your message is private and will not be shared publicly.</p>
+        <p className="flex items-center gap-2 text-sm text-[#55576A]"><Icon name="lock" className="h-4 w-4 text-[#0A6F62]" /> Your message is private and will not be shared publicly.</p>
         <Button type="submit">Send Message <Icon name="mail" className="h-4 w-4" /></Button>
       </div>
       <div aria-live="polite" className="mt-4">
-        {state === "success" ? <p className="rounded-2xl border border-teal/25 bg-teal/12 p-4 text-teal">Message preview saved. Connect Formspree, Tally, or a Vercel function before live deployment.</p> : null}
-        {state === "error" ? <p className="rounded-2xl border border-error/40 bg-error/10 p-4 text-error">Please add your name, a valid email, and a message of at least 10 characters.</p> : null}
+        {state === "success" ? <p className="rounded-2xl border border-[#00C8A0]/25 bg-[#DDF8F2] p-4 text-charcoal">Message preview saved. Connect Formspree, Tally, or a Vercel function before final launch.</p> : null}
+        {state === "error" ? <p id="contact-error" className="rounded-2xl border border-[#B3261E]/40 bg-[#FFF0ED] p-4 text-[#B3261E]">Please add your name, a valid email, and a message of at least 10 characters.</p> : null}
       </div>
     </form>
   );

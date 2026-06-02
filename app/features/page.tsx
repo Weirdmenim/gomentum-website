@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
-import { FeatureCard } from "@/components/FeatureCard";
 import { HeroSection } from "@/components/HeroSection";
-import { Icon } from "@/components/Icons";
-import { SectionHeader } from "@/components/SectionHeader";
+import { StatusPill } from "@/components/StatusPill";
 import { features } from "@/data/features";
 import { getPageMetadata } from "@/data/metadata";
 
@@ -12,35 +10,32 @@ export const metadata: Metadata = getPageMetadata("/features");
 export default function FeaturesPage() {
   return (
     <>
-      <HeroSection eyebrow="Product features" title="AI task breakdown for" highlight="first moves.">
-        <p>Gomentum focuses on the moment before action: brain dump, first move, short start, and gentle momentum. Feature status labels keep the beta experience honest.</p>
+      <HeroSection eyebrow="Features" title="Small tools for the moment before" highlight="action.">
+        <p>Gomentum keeps the product focused: one task, one first move, one gentle start.</p>
       </HeroSection>
-      <section className="mx-auto max-w-site px-4 py-16 md:px-6">
-        <SectionHeader eyebrow="Core features" title="Built to reduce the size of starting." />
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature) => <FeatureCard key={feature.title} feature={feature} />)}
-        </div>
-      </section>
-      <section id="not-task-manager" className="mx-auto max-w-site px-4 py-12 md:px-6">
-        <div className="card-border rounded-panel bg-carddark p-6 md:p-10">
-          <SectionHeader eyebrow="Positioning" title="Gomentum is not another task manager.">
-            <p>It does not begin by asking you to organize everything. It begins by helping you move.</p>
-          </SectionHeader>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              ["Task managers", "Store and organize what you already plan to do."],
-              ["Productivity methods", "Give frameworks that can still feel hard to start."],
-              ["Gomentum", "Finds one first move and helps you begin gently."]
-            ].map(([title, text]) => (
-              <div key={title} className="rounded-card bg-offblack/70 p-6">
-                <Icon name={title === "Gomentum" ? "spark" : "document"} className="h-7 w-7 text-amber" />
-                <h2 className="mt-4 text-xl font-bold text-warm">{title}</h2>
-                <p className="mt-2 text-textgray">{text}</p>
-              </div>
+
+      <section className="bg-warm px-4 py-10 text-charcoal md:px-6 md:py-14">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-balance text-3xl font-bold md:text-4xl">What Gomentum helps with</h2>
+          <div className="mt-7 space-y-3">
+            {features.slice(0, 6).map((feature) => (
+              <article key={feature.title} className="rounded-2xl border border-softgray bg-white p-5">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold">{feature.title}</h3>
+                    <p className="mt-2 leading-7 text-[#55576A]">{feature.description}</p>
+                  </div>
+                  <StatusPill status={feature.status} />
+                </div>
+              </article>
             ))}
           </div>
+          <p className="mt-6 rounded-2xl bg-cream p-5 text-[#55576A]">
+            Feature labels are shown here, not on every page, so the homepage can stay calm while the product remains honest about beta status.
+          </p>
         </div>
       </section>
+
       <CTASection title="Try the first-step demo before signing up." />
     </>
   );

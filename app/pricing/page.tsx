@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ButtonLink } from "@/components/Button";
 import { HeroSection } from "@/components/HeroSection";
-import { PricingCard } from "@/components/PricingCard";
-import { TrustCard } from "@/components/TrustCard";
 import { getPageMetadata } from "@/data/metadata";
 
 export const metadata: Metadata = getPageMetadata("/pricing");
@@ -10,20 +8,27 @@ export const metadata: Metadata = getPageMetadata("/pricing");
 export default function PricingPage() {
   return (
     <>
-      <HeroSection eyebrow="Beta access" title="Start small. It is" highlight="free during beta.">
-        <p>Gomentum is in private beta. Get full access to help you start tasks, build momentum, and shape what comes next.</p>
+      <HeroSection eyebrow="Pricing" title="Free beta access. No card" highlight="required.">
+        <p>Gomentum is still improving with early users, so the beta path stays simple and low-risk.</p>
       </HeroSection>
-      <section className="mx-auto max-w-site px-4 py-16 md:px-6">
-        <PricingCard />
-      </section>
-      <section className="mx-auto max-w-site px-4 py-12 md:px-6">
-        <div className="grid gap-5 md:grid-cols-4">
-          <TrustCard icon="shield" title="No pressure" text="Use what you need. Skip what you do not." />
-          <TrustCard icon="lock" title="No card during beta" text="Beta access should not require payment details." />
-          <TrustCard icon="heart" title="Built with care" text="For real people, not productivity robots." />
-          <TrustCard icon="users" title="Shape the product" text="Early feedback helps improve Gomentum for everyone." />
+
+      <section className="bg-warm px-4 py-10 text-charcoal md:px-6 md:py-14">
+        <div className="mx-auto max-w-3xl rounded-card border border-softgray bg-white p-6 md:p-8">
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#0A6F62]">Beta</p>
+          <h2 className="mt-3 text-4xl font-bold">$0 during beta</h2>
+          <p className="mt-4 text-[#55576A]">Try the product while the team improves task breakdown, dashboard polish, and the full Just Start flow.</p>
+          <ul className="mt-6 space-y-3 text-[#55576A]">
+            <li>No card required</li>
+            <li>Clear notice before any paid plan</li>
+            <li>Early feedback helps shape the product</li>
+          </ul>
+          <div className="mt-7">
+            <ButtonLink href="/contact">Join the beta</ButtonLink>
+          </div>
+          <p className="mt-6 rounded-2xl bg-cream p-4 text-sm text-[#55576A]">
+            Future pricing may include a simple Starter plan and a Plus plan, but beta users should be told before anything changes.
+          </p>
         </div>
-        <p className="mt-8 text-textgray">Questions? Read the <Link href="/faq" className="text-teal hover:text-amber">FAQ</Link> or <Link href="/contact" className="text-teal hover:text-amber">send us a message</Link>.</p>
       </section>
     </>
   );

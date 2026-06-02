@@ -89,7 +89,23 @@ export const pages: PageInfo[] = [
 ];
 
 export const mainNav = [
+  { label: "Home", href: "/" },
   { label: "How It Works", href: "/how-it-works" },
+  { label: "Features", href: "/features" },
+  { label: "Use Cases", href: "/use-cases" },
+  { label: "Resources", href: "/resources" },
   { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" }
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" }
+];
+
+export const guideNav = [
+  { label: "ADHD & Task Initiation", href: "/adhd-task-initiation" },
+  { label: "Task Paralysis Guide", href: "/task-paralysis-guide" }
+];
+
+export const trustNav = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+  { label: "Accessibility", href: "/accessibility" }
 ];
