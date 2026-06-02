@@ -61,18 +61,18 @@ export function InteractiveDemo() {
   }[state];
 
   return (
-    <section id="first-step-demo" aria-labelledby="first-step-demo-title" className="bg-warm px-4 py-12 text-charcoal md:px-6 md:py-16">
-      <div className="mx-auto grid max-w-site gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+    <section id="first-step-demo" aria-labelledby="first-step-demo-title" className="bg-warm px-4 py-8 text-charcoal md:px-6 md:py-12">
+      <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
         <div>
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-[#0A6F62]">Try the promise</p>
-          <h2 id="first-step-demo-title" className="text-balance text-3xl font-bold leading-tight md:text-5xl">Try one first move.</h2>
-          <p className="mt-4 text-lg text-[#55576A]">Pick a starter or type one task. The goal is not to plan everything. It is only to find the smallest useful entrance.</p>
-          <div className="mt-6 rounded-2xl border border-[#BFEDE4] bg-[#E8FBF7] p-4 text-sm text-[#284B48]">
+          <p className="mb-2 text-sm font-semibold text-[#0A6F62]">Try the promise</p>
+          <h2 id="first-step-demo-title" className="text-balance text-3xl font-bold leading-tight md:text-4xl">Try one first move.</h2>
+          <p className="mt-3 text-base leading-7 text-[#55576A]">Pick a starter or type one task. The goal is not to plan everything. It is only to find the smallest useful entrance.</p>
+          <div className="mt-5 rounded-2xl bg-cream p-4 text-sm text-[#55576A]">
             <span className="font-semibold text-[#0A6F62]">Private demo:</span> No account. No live AI. No task is saved.
           </div>
         </div>
-        <div className="rounded-panel border border-softgray bg-white p-5 shadow-sm md:p-7">
-          <div className="mb-5">
+        <div className="rounded-card border border-softgray bg-white p-5 md:p-6">
+          <div className="mb-4">
             <p className="text-sm font-semibold text-[#55576A]">Need an example?</p>
             <div className="mt-2 flex flex-wrap gap-2">
               {starterTasks.map((starterTask) => (
@@ -80,7 +80,7 @@ export function InteractiveDemo() {
                   key={starterTask}
                   type="button"
                   onClick={() => submit(starterTask)}
-                  className="min-h-10 rounded-full bg-cream px-4 py-2 text-sm font-semibold text-charcoal transition hover:bg-[#FFE8B5]"
+                  className="min-h-10 rounded-full border border-softgray bg-white px-4 py-2 text-sm font-semibold text-charcoal transition hover:bg-cream"
                 >
                   {starterTask}
                 </button>
@@ -115,11 +115,11 @@ export function InteractiveDemo() {
             <p className="text-sm font-semibold">{message}</p>
             {state === "loading" ? <div className="mt-4 h-3 w-full overflow-hidden rounded-full bg-white"><div className="h-full w-2/3 rounded-full bg-teal" /></div> : null}
             {result && state === "success" ? (
-              <div className="mt-4 rounded-2xl border border-[#BFEDE4] bg-white p-4">
+              <div className="mt-4 rounded-2xl bg-white p-4">
                 <p className="text-sm font-semibold text-[#0A6F62]">{result.category}</p>
-                <p className="mt-2 text-xl font-bold text-charcoal">{result.firstMove}</p>
+                <p className="mt-2 text-lg font-bold leading-8 text-charcoal">{result.firstMove}</p>
                 <p className="mt-3 text-sm text-[#55576A]">Before: “I should do the whole thing.” After: one small entrance.</p>
-                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row">
                   <ButtonLink href="/contact" variant="primary">Join beta to continue <Icon name="arrow" className="h-4 w-4" /></ButtonLink>
                   <Button onClick={reset} variant="secondaryLight">Try another task</Button>
                 </div>

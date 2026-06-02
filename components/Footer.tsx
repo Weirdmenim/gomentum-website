@@ -32,9 +32,9 @@ const groups = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-softgray/10 bg-offblack py-12">
+    <footer className="border-t border-softgray/10 bg-offblack py-10">
       <div className="mx-auto grid max-w-site gap-10 px-4 md:grid-cols-[1.4fr_2fr] md:px-6">
-        <div>
+        <div className="text-warm">
           <Logo />
           <p className="mt-4 max-w-sm text-textgray">Start tasks when starting feels impossible. One small step. Real momentum.</p>
           <p className="mt-6 text-sm text-textgray">Gomentum is a productivity support tool, not medical or therapy advice.</p>
