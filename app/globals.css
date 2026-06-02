@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-primary: #1C1C2E;
+  --color-bg-secondary: #14141F;
+  --color-bg-warm: #FFF8EC;
+  --color-bg-soft: #FFF3D8;
+  --color-primary: #F5A623;
+  --color-accent-success: #00C8A0;
+  --color-text-on-dark: #FFF8EC;
+  --color-text-secondary-dark: #BFC0CF;
+  --color-focus: #00C8A0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top right, rgba(245, 166, 35, 0.16), transparent 32rem), var(--color-bg-secondary);
+  color: var(--color-text-on-dark);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+button, a, input, textarea, select, summary {
+  outline-offset: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: #F5A623;
+  color: #1C1C2E;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 999px;
+  background: #F5A623;
+  color: #1C1C2E;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.card-border {
+  border: 1px solid rgba(230, 230, 238, 0.14);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.noise-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 10%, rgba(0, 200, 160, 0.08), transparent 28rem), radial-gradient(circle at 95% 20%, rgba(245, 166, 35, 0.12), transparent 22rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
