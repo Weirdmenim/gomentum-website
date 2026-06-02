@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gomentum-website.vercel.app/sitemap.xml

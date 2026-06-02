@@ -9,6 +9,12 @@ const required = [
   'how-it-works/index.html',
   'use-cases/index.html',
   'resources/index.html',
+  'resources/task-paralysis/index.html',
+  'resources/adhd-task-initiation/index.html',
+  'resources/how-to-start-when-overwhelmed/index.html',
+  'resources/break-big-tasks-into-small-steps/index.html',
+  'resources/why-to-do-lists-do-not-help-starting/index.html',
+  'resources/brain-dump-productivity/index.html',
   'pricing/index.html',
   'faq/index.html',
   'contact/index.html',
@@ -70,4 +76,20 @@ if (!contact.includes('formspree.io/f/YOUR_FORMSPREE_ID')) {
   process.exit(1);
 }
 
-console.log(`Validation passed: ${htmlFiles.length} HTML pages plus sitemap, robots, CSS, JS, and evidence assets.`);
+
+const sitemap = fs.readFileSync(path.join(dist, 'sitemap.xml'), 'utf8');
+for (const url of [
+  '/resources/task-paralysis/',
+  '/resources/adhd-task-initiation/',
+  '/resources/how-to-start-when-overwhelmed/',
+  '/resources/break-big-tasks-into-small-steps/',
+  '/resources/why-to-do-lists-do-not-help-starting/',
+  '/resources/brain-dump-productivity/'
+]) {
+  if (!sitemap.includes(url)) {
+    console.error('Sitemap missing blog URL: ' + url);
+    process.exit(1);
+  }
+}
+console.log(`Validation passed: ${htmlFiles.length} HTML pages plus sitemap, robots, CSS, JS, evidence assets, and blog routes.`);
+

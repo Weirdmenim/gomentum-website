@@ -1,10 +1,4 @@
-node_modules/
-.next/
-dist/
-.vercel/
-.env*
-*.tsbuildinfo
-npm-debug.log*
+node_modules
 .DS_Store
-docs-copy-update.txt
-docs-validation.txt
+.env
+.vercel

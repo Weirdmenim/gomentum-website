@@ -27,6 +27,12 @@ This is the restored clean Gomentum website package. It keeps the full website o
 13. Evidence & QA `/evidence/`
 14. ADHD Task Initiation `/adhd-task-initiation/`
 15. Task Paralysis Guide `/task-paralysis-guide/`
+16. Blog: Task Paralysis `/resources/task-paralysis/`
+17. Blog: ADHD Task Initiation `/resources/adhd-task-initiation/`
+18. Blog: How to Start When Overwhelmed `/resources/how-to-start-when-overwhelmed/`
+19. Blog: Break Big Tasks Into Small Steps `/resources/break-big-tasks-into-small-steps/`
+20. Blog: Why To-Do Lists Do Not Help `/resources/why-to-do-lists-do-not-help-starting/`
+21. Blog: Brain Dump Productivity `/resources/brain-dump-productivity/`
 
 ## Local commands
 
