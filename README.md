@@ -1,10 +1,42 @@
 # Gomentum Website
 
-Push-ready Gomentum website for the Website Growth, SEO & Conversion Optimization task.
+This is the clean Gomentum website package. It includes the static build scripts, SEO resource/blog routes, evidence placeholders, and Next.js dependency/config files so Vercel projects that check for Next can detect it correctly.
 
-This package keeps the website source files and uses a lightweight static build into `dist/`. It also includes `next`, `react`, and `react-dom` in dependencies so a Vercel project that is still set to the Next.js preset will not show "No Next.js version detected".
+## What is included
 
-## Local test
+- `scripts/` - source build, validation, and local server scripts
+- `public/evidence/` - evidence placeholder assets
+- `next.config.mjs` - Next config file included for Vercel/Next detection
+- `tsconfig.json` and `next-env.d.ts` - TypeScript/Next support files
+- `dist/` - generated locally by `npm run build`; ignored by Git and rebuilt by Vercel
+- `package.json` - project commands
+- `vercel.json` - deployment config
+
+## Pages included
+
+1. Home `/`
+2. Product `/product/`
+3. Features `/features/`
+4. How It Works `/how-it-works/`
+5. Use Cases `/use-cases/`
+6. Resources `/resources/`
+7. Pricing `/pricing/`
+8. FAQ `/faq/`
+9. Contact `/contact/`
+10. Privacy `/privacy/`
+11. Terms `/terms/`
+12. Accessibility `/accessibility/`
+13. Evidence & QA `/evidence/`
+14. ADHD Task Initiation `/adhd-task-initiation/`
+15. Task Paralysis Guide `/task-paralysis-guide/`
+16. Blog: Task Paralysis `/resources/task-paralysis/`
+17. Blog: ADHD Task Initiation `/resources/adhd-task-initiation/`
+18. Blog: How to Start When Overwhelmed `/resources/how-to-start-when-overwhelmed/`
+19. Blog: Break Big Tasks Into Small Steps `/resources/break-big-tasks-into-small-steps/`
+20. Blog: Why To-Do Lists Do Not Help `/resources/why-to-do-lists-do-not-help-starting/`
+21. Blog: Brain Dump Productivity `/resources/brain-dump-productivity/`
+
+## Local commands
 
 ```bash
 npm install
@@ -13,25 +45,22 @@ npm run validate
 npm start
 ```
 
+Then open:
+
+```txt
+http://localhost:3000
+```
+
 ## Vercel settings
 
-Use these exact settings:
+```txt
+Framework Preset: Other
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
+Root Directory: ./
+```
 
-- Framework Preset: `Other` preferred. If your existing project is stuck on `Next.js`, the package still includes Next dependencies.
-- Build Command: `npm run build`
-- Output Directory: `dist`
-- Install Command: `npm install`
-- Root Directory: `./`
+## GitHub push note
 
-## Important Git note
-
-Do not push generated folders. `.gitignore` already excludes:
-
-- `node_modules/`
-- `.next/`
-- `dist/`
-- `.vercel/`
-
-## Pages included
-
-The build generates 21 pages, including Home, Product, Features, How It Works, Use Cases, Resources, Pricing, FAQ, Contact, Privacy, Terms, Accessibility, Evidence & QA, ADHD Task Initiation, Task Paralysis Guide, and 6 Resources blog pages.
+This package keeps `dist/` visible and not ignored, so the generated page files will appear when you push to GitHub. `node_modules`, `.env`, and `.vercel` are ignored.
